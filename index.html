@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="lee1993">
+    <meta name="description" content="사이트 따라만들기, 클론코딩, HTML5, CSS3, JavaScript, jQuery, 기업사이트 제작">
+    <meta name="keywords" content="메가박스 사이트 따라만들기, HTML5, CSS3, JavaScript, jQuery">
+    <title>라이프시어터,메가박스</title>
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
+    <!-- 스타일시트 -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!-- 웹 폰트 -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css">
+    <!-- IE Version Check -->
+    <script src="assets/js/ie-checker-min.js"></script>
+</head>
+
+<body>
+    <!--[IF IE 8]>
+    <script type="text/javascript">
+        alert("Please Upgrade Your BROWSER !");
+    </script>
+<![endif]-->
+
+    <!-- 스킵 네비게이션 -->
+    <div id="skip" title="스킵 네비게이션">
+        <a href="#contents" title="본문 바로가기">본문 바로가기</a>
+        <a href="#footer" title="푸터 바로가기">푸터 바로가기</a>
+    </div>
+    <!-- //스킵 네비게이션 -->
+
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <header id="header" class="header">
+            <h1 class="logo"><a href="#" title="MEGABOX 메인으로 가기">MEGABOX : Life Theater</a></h1>
+            <!-- util_area -->
+            <div class="util_area clearfix">
+                <div class="left_link">
+                    <a href="#" title="VIP LOUNGE">VIP LOUNGE</a>
+                    <a href="#" title="멤버십">멤버십</a>
+                    <a href="#" title="고객센터">고객센터</a>
+                </div>
+                <div class="right_link">
+                    <a href="#" title="로그인">로그인</a>
+                    <a href="#" title="회원가입">회원가입</a>
+                    <a href="#" title="빠른예매">빠른예매</a>
+                </div>
+            </div>
+            <div class="link_area clearfix">
+                <a href="#" class="btn_sitemap" title="사이트맵">사이트맵</a>
+                <a href="#" class="btn_search" title="검색">검색</a>
+                <a href="#" class="btn_ticket" title="상영시간표">상영시간표</a>
+                <a href="#" class="btn_mymega" title="메가박스">나의 메가박스</a>
+            </div>
+            <!-- //util_area -->
+            <!-- nav -->
+            <nav id="gnb">
+                <ul class="gnb_depth1">
+                    <li>
+                        <a href="#" class="gnb_movie" title="영화">영화</a>
+                        <div class="gnb_depth2">
+                            <ul>
+                                <li><a href="#" title="전체영화">전체영화</a></li>
+                                <li><a href="#" title="N스크린">N스크린</a></li>
+                                <li><a href="#" title="큐레이션">큐레이션</a></li>
+                                <li><a href="#" title="무비포스트">무비포스트</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="gnb_reserve" title="예매">예매</a>
+                        <div class="gnb_depth2">
+                            <ul>
+                                <li><a href="#" title="빠른예매">빠른예매</a></li>
+                                <li><a href="#" title="상영시간표">상영시간표</a></li>
+                                <li><a href="#" title="더 부티크 프라이빗 예매">더 부티크 프라이빗 예매</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="gnb_theater" title="극장">극장</a>
+                        <div class="gnb_depth2">
+                            <ul>
+                                <li><a href="#" title="전체극장">전체극장</a></li>
+                                <li><a href="#" title="특별관">특별관</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="gnb_event" title="이벤트">이벤트</a>
+                        <div class="gnb_depth2">
+                            <ul>
+                                <li><a href="#" title="진행중 이벤트">진행중 이벤트</a></li>
+                                <li><a href="#" title="지난 이벤트">지난 이벤트</a></li>
+                                <li><a href="#" title="당첨자발표">당첨자발표</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#" class="gnb_store" title="스토어">스토어</a></li>
+                    <li>
+                        <a href="#" class="gnb_benefit" title="혜택">혜택</a>
+                        <div class="gnb_depth2">
+                            <ul>
+                                <li><a href="#" title="메가박스 멤버십">메가박스 멤버십</a></li>
+                                <li><a href="#" title="제휴/할인">제휴/할인</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <!-- //nav -->
+            <!-- layer_sitemap -->
+            <div id="layer_sitemap">
+                <div class="wrap">
+                    <a href="#" class="ir_so" title="사이트맵 레이어 입니다.">사이트맵 레이어 입니다.</a>
+                    <p class="tit">SITEMAP</p>
+                    <div class="list item01">
+                        <p class="tit_depth">영화</p>
+                        <ul class="list_depth">
+                            <li><a href="#" title="전체영화">전체영화</a></li>
+                            <li><a href="#" title="큐레이션">큐레이션</a></li>
+                            <li><a href="#" title="영화제">영화제</a></li>
+                            <li><a href="#" title="무비포스트">무비포스트</a></li>
+                        </ul>
+                    </div>
+                    <div class="list item02">
+                        <p class="tit_depth">예매</p>
+                        <ul class="list_depth">
+                            <li><a href="#" title="빠른예매">빠른예매</a></li>
+                            <li><a href="#" title="상영시간표">상영시간표</a></li>
+                            <li><a href="#" title="더 부티크 프라빗 예매">더 부티크 프라빗 예매</a></li>
+                        </ul>
+                    </div>
+                    <div class="list item03">
+                        <p class="tit_depth">극장</p>
+                        <ul class="list_depth">
+                            <li><a href="#" title="전체극장">전체극장</a></li>
+                            <li><a href="#" title="특별관">특별관</a></li>
+                        </ul>
+                    </div>
+                    <div class="list item04">
+                        <p class="tit_depth">이벤트</p>
+                        <ul class="list_depth">
+                            <li><a href="#" title="진행중 이벤트">진행중 이벤트</a></li>
+                            <li><a href="#" title="지난 이벤트">지난 이벤트</a></li>
+                            <li><a href="#" title="당첨자발표">당첨자발표</a></li>
+                        </ul>
+                    </div>
+                    <div class="list item05">
+                        <p class="tit_depth">스토어</p>
+                        <ul class="list_depth">
+                            <li><a href="#" title="새로운 상품">새로운 상품</a></li>
+                            <li><a href="#" title="메가티켓">메가티켓</a></li>
+                            <li><a href="#" title="메가찬스">메가찬스</a></li>
+                            <li><a href="#" title="팝콘/음료/굿즈">팝콘/음료/굿즈</a></li>
+                        </ul>
+                    </div>
+                    <div class="list item06">
+                        <p class="tit_depth">나의 메가박스</p>
+                        <ul class="list_depth mymage">
+                            <li><a href="#" title="나의 메가박스 홈">나의 메가박스 홈</a></li>
+                            <li><a href="#" title="예매/구매내역">예매/구매내역</a></li>
+                            <li><a href="#" title="영화관람권">영화관람권</a></li>
+                            <li><a href="#" title="스토어교환권">스토어교환권</a></li>
+                            <li><a href="#" title="할인/제휴쿠폰">할인/제휴쿠폰</a></li>
+                            <li><a href="#" title="멤버십포인트">멤버십포인트</a></li>
+                            <li><a href="#" title="나의 무비스토리">나의 무비스토리</a></li>
+                            <li><a href="#" title="나의 이벤트 응모내역">나의 이벤트 응모내역</a></li>
+                            <li><a href="#" title="나의 문의내역">나의 문의내역</a></li>
+                            <li><a href="#" title="자주쓰는 할인 카드">자주쓰는 할인 카드</a></li>
+                            <li><a href="#" title="회원정보">회원정보</a></li>
+                        </ul>
+                    </div>
+                    <div class="list item07">
+                        <p class="tit_depth">혜택</p>
+                        <ul class="list_depth">
+                            <li><a href="#" title="멤버십 안내">멤버십 안내</a></li>
+                            <li><a href="#" title="VIP LOUNGE">VIP LOUNGE</a></li>
+                            <li><a href="#" title="제휴/할인">제휴/할인</a></li>
+                        </ul>
+                    </div>
+                    <div class="list item08">
+                        <p class="tit_depth">고객센터</p>
+                        <ul class="list_depth">
+                            <li><a href="#" title="고객센터 홈">고객센터 홈</a></li>
+                            <li><a href="#" title="자주묻는질문">자주묻는질문</a></li>
+                            <li><a href="#" title="공지사항">공지사항</a></li>
+                            <li><a href="#" title="1:1문의">1:1문의</a></li>
+                            <li><a href="#" title="단체/대관문의">단체/대관문의</a></li>
+                            <li><a href="#" title="분실물문의">분실물문의</a></li>
+                        </ul>
+                    </div>
+                    <div class="list item09">
+                        <p class="tit_depth">회사소개</p>
+                        <ul class="list_depth">
+                            <li><a href="#" target="_blank" title="메가박스소개">메가박스소개</a></li>
+                            <li><a href="#" target="_blank" title="사회공헌">사회공헌</a></li>
+                            <li><a href="#" target="_blank" title="홍보자료">홍보자료</a></li>
+                            <li><a href="#" target="_blank" title="제휴/부대사업문의">제휴/부대사업문의</a></li>
+                            <li><a href="#" target="_blank" title="온라인제보센터">온라인제보센터</a></li>
+                            <li><a href="#" target="_blank" title="자료">IR자료</a></li>
+                            <li><a href="#" target="_blank" title="인재채용림">인재채용</a></li>
+                            <li><a href="https://jebo.joonganggroup.com/main.do" target="_blank" title="윤리경영">윤리경영</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="list item10">
+                        <p class="tit_depth">영화</p>
+                        <ul class="list_depth">
+                            <li><a href="#" title="이용약관">이용약관</a></li>
+                            <li><a href="#" title="개인정보처리방침">개인정보처리방침</a></li>
+                            <li><a href="#" title="스크린수배정에관한기준">스크린수배정에관한기준</a></li>
+                        </ul>
+                    </div>
+                    <div class="ir_so">
+                        <a href="#" class="layer_close" title="레이어닫기">레이어닫기</a>
+                    </div>
+                </div>
+            </div>
+            <!-- //layer_sitemap -->
+            <!-- layer_search -->
+            <div id="layer_search">
+                <div class="wrap">
+                    <a href="#" class="ir_so" title="검색 레이어 입니다.">검색 레이어 입니다.</a>
+                    <div class="tab_rank">
+                        <ul>
+                            <li class="on"><button type="button" class="btn">예매율 순</button></li>
+                            <li><button type="button" class="btn">메가박스 관객순</button></li>
+                        </ul>
+                    </div>
+                    <!-- rank_cont -->
+                    <div class="rank_cont">
+                        <div class="list">
+                            <p class="img">
+                                <img src="assets/img/aR0TeTKH61QBpOgvYEpPCyFs3im2ivR0_420.jpg" alt="반지의 제왕 : 반지원정대">
+                            </p>
+                            <ul>
+                                <li><em>1</em><a href="#" title="반지의 제왕 : 반지원정대 상세보기">반지의 제왕 : 반지원정대</a></li>
+                                <li><em>2</em><a href="#" title="미나리 상세보기">미나리</a></li>
+                                <li><em>3</em><a href="#" title="태양을 덮다 상세보기">태양을 덮다</a></li>
+                                <li><em>4</em><a href="#" title="아이 씨 유 상세보기">아이 씨 유</a></li>
+                                <li><em>5</em><a href="#" title="극장판 귀멸의 칼날: 무한열차편 상세보기">극장판 귀멸의 칼날: 무한열차편</a></li>
+                            </ul>
+                            <ul>
+                                <li><em>1</em><a href="#" title="극장판 귀멸의 칼날: 무한열차편 상세보기">극장판 귀멸의 칼날:
+                                        무한열차편</a></li>
+                                <li><em>2</em><a href="#" title="소울 상세보기">소울</a></li>
+                                <li><em>3</em><a href="#" title="미션 파서블 상세보기">미션 파서블</a></li>
+                                <li><em>4</em><a href="#" title="미나리 상세보기">미나리</a></li>
+                                <li><em>5</em><a href="#" title="극장판 바이올렛 에버가든 상세보기">극장판 바이올렛 에버가든</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //rank_cont -->
+                    <!-- search_area -->
+                    <div class="search_area">
+                        <input type="text" id="movieName" class="input_text" title="영화명을 검색해 주세요"
+                            placeholder="영화를 검색하세요">
+                        <button type="button" id="btnSerach" class="btn_movie_search">검색</button>
+                    </div>
+                    <!-- //search_area -->
+                </div>
+            </div>
+            <!-- //layer_search -->
+            <!-- layer_mypage -->
+            <div id="layer_mymega">
+                <a href="#" class="ir_so" title="나의 메가박스 레이어 입니다.">나의 메가박스 레이어 입니다.</a>
+                <div class="wrap">
+                    <div class="login_before">
+                        <p class="txt">
+                            로그인 하시면 나의 메가박스를 만날 수 있어요.<br>
+                            영화를 사랑하는 당신을 위한 꼭 맞는 혜택까지 확인해 보세요!
+                        </p>
+                        <div class="mb50">
+                            <a href="#" class="button" title="로그인">로그인</a>
+                        </div>
+                        <a href="#" class="log_link" title="혹시 아직 회원이 아니신가요?">혹시 아직 회원이 아니신가요?</a>
+                    </div>
+                </div>
+            </div>
+            <!-- //layer_mypage -->
+        </header>
+        <!-- //header -->
+
+        <!-- contents -->
+        <div id="contents">
+            <div class="container">
+                <!-- main_page -->
+                <div class="main_page">
+                    <div class="main_notice_popup" style="display: none;"></div>
+                    <!-- main_movie section01-->
+                    <div id="main_section01">
+                        <!-- bg -->
+                        <div class="bg">
+                            <div class="bg_pattern"></div>
+                            <img src="assets/img/vJYijC8fm8p6zNaDfJeYvTwr2pb8xYY6_380.jpg" alt="미나리_1차 포스터_절찬상영중">
+                        </div>
+                        <!-- //bg -->
+                        <!-- cont_area -->
+                        <div class="cont_area">
+                            <h2><a href="#" title="박스오피스">박스오피스</a></h2>
+                            <a href="#" class="more_movie" title="더 많은 영화보기">더 많은 영화보기<i class="icon"></i></a>
+                            <!-- movie_list -->
+                            <div class="movie_list">
+                                <ul class="list clearfix">
+                                    <li>
+                                        <a href="#" title="영화상세 보기">
+                                            <p class="rank">1</p>
+                                            <img src="assets/img/aR0TeTKH61QBpOgvYEpPCyFs3im2ivR0_420.jpg"
+                                                alt="반제의 제왕 : 반지원정대">
+                                            <div class="screen_type">
+                                                <p><img src="assets/img/mov_top_tag_db.png" alt="dolby"></p>
+                                                <p><img src="assets/img/mov_top_tag_mx.png" alt="mx"></p>
+                                            </div>
+                                            <!-- wrap -->
+                                            <div class="wrap">
+                                                <div class="summary">
+                                                    마지막 반지를 차지하는 자, 모든 힘을 지배하게 될 것이다!<br>시간과 공간을 알 수 없는 까마득한 옛날... 전지전능한
+                                                    능력을 보유한 위대한 신들은 엘프족과 난쟁이족, 그리고 인간 종족을 자신들의 첫번째 세계 속에 창조하여 평화로운 삶을 살게
+                                                    하였다. 많은 세월이 지나고 오랜 동안 악의 힘에 동화된 신 사우론은 절대 악의 힘을 빌어 다른 신들에 대항하며 그들이
+                                                    창조해 놓은 모든 세계를 자신의 것으로 만들 계략을 세우게 된다. 그러나 사우론의 계약을 알게 된 나머지 신들은 타락한
+                                                    사우론을 신의 세계에서 추방하였고 모든 세력과 힘을 잃게 된 사우론은 인간들의 세상에 나타나 어리석은 인간들을 유혹해
+                                                    위대한 신들에게 도전하게 만든다. 신적인 힘을 거의 잃은 사우론은 인간 세계에 존재하는 전설적인 마법 반지들의 소문을 듣게
+                                                    되고 그 11개의 반지들을 지배하기 위해 자신의 남은 모든 힘을 실은 12번째 ‘절대 반지’를 만들어 신들을 위협한다.
+                                                    하지만 사우론은 그 절대반지를 잃어버리게 되고 사우론과 인간들의 어러리석은 행동에 분노한 위대한 신들은 인간 세계에 엄청난
+                                                    재앙을 내렸다. 결국 인간들의 왕은 죽음을 맞이하게 되었고 그와 마찬가지로 암흑의 제왕 사우론도 역사 속으로 사라지며
+                                                    다시는 모습을 나타내지 못했다. 그로부터 오랜 세월이 또다시 흐른다.<br>악의 군주 사우론과 신들의 전쟁이 아주 먼 옛날
+                                                    이야기가 되었을 때... 첫번째 세계 다음에 찾아온 중간 세계에서도 미약하나마 절대반지의 힘은 여전히 존재하게 된다.
+                                                    그러던 어느날, 호빗이라 불리우는 난쟁이 종족의 빌보는 여행 중에 우연히 낡은 금반지 하나를 얻게 된다. 그 반지가
+                                                    소유하고 있는 사람의 모습을 가려주고 또한 어두운 곳에서도 환하게 볼 수 있는 힘을 주는 마법의 반지임을 알게 된 빌보는
+                                                    그 반지를 가지고 자신들의 마을에서 유용한 도구로 사용한다. 그 신기하고 재미있는 반지가 암흑의 제왕 사우론이 만들었던
+                                                    절대 반지임을 전혀 알지 못한 채. 한편, 오랜동안 암흑의 세계에 숨어지내며 자신의 힘을 조금씩 키워나가던 사우론은 머더의
+                                                    검은 탑에서 세계의 사방으로 자신의 권능을 넓혀나가며 중간 세계에 살고 있는 인간과 엘프, 호빗족들을 억압해 나간다. 또한
+                                                    신들과의 전쟁에서 잃어버린 11개의 반지를 끌어모으는데 성공한 사우론은 그 11개의 반지를 지배하며 세상을 지배할 수 있게
+                                                    해줄 절대반지를 찾을 날만을 기다리게 된다.</div>
+                                                <div class="score">
+                                                    <div class="preview">
+                                                        <p class="tit">관람평</p>
+                                                        <p class="number">0<span class="ir_so">점</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- //wrap -->
+                                        </a>
+                                        <!-- btn_util -->
+                                        <div class="btn_util">
+                                            <a href="#" class="like">178</a>
+                                            <a href="#" class="btn_blue" title="예매하기">예매</a>
+                                        </div>
+                                        <!-- //btn_util -->
+                                    </li>
+                                    <li>
+                                        <a href="#" title="영화상세 보기">
+                                            <p class="rank">2</p>
+                                            <img src="assets/img/Pu4sv6WSu8qn9i6H7DvvSE32Jo7SPQDI_420.jpg" alt="미나리">
+                                            <div class="screen_type">
+                                                <p><img src="assets/img/mov_top_tag_db.png" alt="dolby"></p>
+                                                <p><img src="assets/img/mov_top_tag_mx.png" alt="mx"></p>
+                                            </div>
+                                            <div class="wrap">
+                                                <div class="summary">
+                                                    2021년 전 세계가 기다린<br>어느 한국 가족의 원더풀한 이야기<br><br>"미나리는 어디서든 잘
+                                                    자라"<br><br>낯선 미국, 아칸소로 떠나온 한국 가족.<br>가족들에게 뭔가 해내는 걸 보여주고 싶은 아빠
+                                                    '제이콥'(스티븐 연)은<br>자신만의 농장을 가꾸기 시작하고 엄마 '모니카'(한예리)도 다시 일자리를
+                                                    찾는다.<br><br>아직 어린 아이들을 위해 ‘모니카’의 엄마 ‘순자’(윤여정)가 함께 살기로 하고<br>가방 가득
+                                                    고춧가루, 멸치, 한약 그리고 미나리씨를 담은 할머니가 도착한다.<br><br>의젓한 큰딸 '앤'(노엘 케이트 조)과
+                                                    장난꾸러기 막내아들 '데이빗'(앨런 김)은<br>여느 그랜마같지 않은 할머니가 영- 못마땅한데…<br><br>함께 있다면,
+                                                    새로 시작할 수 있다는 희망으로<br>하루하루 뿌리 내리며 살아가는<br>어느 가족의 아주 특별한 여정이 시작된다!
+                                                </div>
+                                                <div class="score">
+                                                    <div class="preview">
+                                                        <p class="tit">관람평</p>
+                                                        <p class="number">8.6<span class="ir_so">점</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div class="btn_util">
+                                            <a href="#" class="like">659</a>
+                                            <a href="#" class="btn_blue" title="예매하기">예매</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="영화상세 보기">
+                                            <p class="rank">3</p>
+                                            <img src="assets/img/JyGwnwUEwd4kaHaS8oIVIfywZR2Btlrq_420.jpg" alt="태양을 덮다">
+                                            <div class="wrap">
+                                                <div class="summary">
+                                                    2011년 3월 11일. 동일본 대지진이 일어난 후.<br><br>정치부 기자인 나베시마는 지진과 정부의 대처를 취재하던
+                                                    중, 무언가 심상찮은 일이 일어나고 있음을 눈치챈다. 어렵사리 얻어낸 정보는, 지진으로 후쿠시마 원전 냉각장치가 멈추었다는
+                                                    것!<br>그러나 정보는 제한되어 있고 정부의 대처는 답답하기만 하다.<br>직접 도비(東日)전력 원자력부에 몸담았던
+                                                    요코하마씨를 찾아내 취재하는 나베시마. 그러나 그가 말해주는 진실들은 더욱 놀라운데…<br>패닉에 빠져버린 정부 관계자들과
+                                                    과학자들, 그리고 정든 고향을 떠나야만 하는 사람들.<br>모두가 어찌할 바를 몰랐던 혼란, 그 날들의 기록.</div>
+                                                <div class="score">
+                                                    <div class="preview">
+                                                        <p class="tit">관람평</p>
+                                                        <p class="number">0<span class="ir_so">점</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div class="btn_util">
+                                            <a href="#" class="like">25</a>
+                                            <a href="#" class="btn_blue" title="예매하기">예매</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="영화상세 보기">
+                                            <p class="rank">4</p>
+                                            <img src="assets/img/qDLdOQKdvIeLyniUM7DX567IaJeyJmbv_420.jpg"
+                                                alt="극장판 귀멸의 칼날: 무한열차편">
+                                            <div class="screen_type">
+                                                <p><img src="assets/img/mov_top_tag_mx.png" alt="mx"></p>
+                                            </div>
+                                            <div class="wrap">
+                                                <div class="summary">혈귀로 변해버린 여동생 ‘네즈코’를 인간으로 되돌릴 단서를 찾아 비밀조직 귀살대에 들어간
+                                                    ‘탄지로.’
+                                                    ‘젠이츠’, ‘이노스케’와 새로운 임무 수행을 위해 무한열차에 탑승 후
+                                                    귀살대 최강 검사 염주 ‘렌고쿠’와 합류한다.
+
+                                                    달리는 무한열차에서 승객들이 하나 둘 흔적 없이 사라지자
+                                                    숨어있는 식인 혈귀의 존재를 직감하는 ‘렌고쿠’.
+
+                                                    귀살대 ‘탄지로’ 일행과 최강 검사 염주 ‘렌고쿠’는
+                                                    어둠 속을 달리는 무한열차에서 모두의 목숨을 구하기 위해
+                                                    예측불가능한 능력을 가진 혈귀와 목숨을 건 혈전을 시작하는데…</div>
+                                                <div class="score">
+                                                    <div class="preview">
+                                                        <p class="tit">관람평</p>
+                                                        <p class="number">9.5<span class="ir_so">점</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div class="btn_util">
+                                            <a href="#" class="like">6.6k</a>
+                                            <a href="#" class="btn_blue" title="예매하기">예매</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- //movie_list -->
+                            <!-- search_link -->
+                            <div class="search_link">
+                                <div class="cell">
+                                    <div class="search">
+                                        <input type="text" class="input_text" title="영화 검색" placeholder="영화명을 입력해 주세요">
+                                        <button type="button" class="btn_movie_search">검색</button>
+                                    </div>
+                                </div>
+                                <div class="cell">
+                                    <a href="#" title="상영시간표 보기"><i class="schedule_main icon"></i>상영시간표</a>
+                                </div>
+                                <div class="cell">
+                                    <a href="#" title="박스오피스 보기"><i class="box_office_main icon"></i>박스오피스</a>
+                                </div>
+                                <div class="cell">
+                                    <a href="#" title="빠른예매 보기"><i class="reserve_main icon"></i>빠른예매</a>
+                                </div>
+                            </div>
+                            <!-- //search_link -->
+
+                            <!-- moving_mouse -->
+                            <div class="moving_mouse">
+                                <img src="assets/img/ico-mouse.png" alt="마우스아이콘">
+                            </div>
+                            <!-- //moving_mouse -->
+                        </div>
+                        <!-- //cont_area -->
+                    </div>
+                    <!-- //main_movie section01-->
+
+                    <!-- main_benefit section02-->
+                    <div id="main_section02" class="main_benefit">
+                        <!-- wrap -->
+                        <div class="wrap">
+                            <!-- benefit_tit -->
+                            <div class="benefit_tit clearfix">
+                                <h3 class="tit">혜택</h3>
+                                <a href="javascript:void(0);" title="혜택 더보기">더보기</a>
+                            </div>
+                            <!-- //benefit_tit -->
+                            <!-- slider -->
+                            <div class="slider swiper-container">
+                                <div class="slider_view swiper-wrapper">
+                                    <div class="slider_item swiper-slide">
+                                        <div class="position">
+                                            <div class="txt"><a href="javascript:void(0);"><img
+                                                        src="assets/img/UcTpfVhW4MICH3HivJyTvC3xeZJgVfAC.jpg"
+                                                        alt="메가박스 오리지널 티켓1"></a></div>
+                                            <div class="bg"><a href="javascript:void(0);"><img
+                                                        src="assets/img/zA4dAn89GfHlrBhBdgYrzV7Kre8sgQRQ.png"
+                                                        alt="반지의 제왕 오리지널 티켓"></a></div>
+                                        </div>
+                                    </div>
+                                    <div class="slider_item swiper-slide">
+                                        <div class="position">
+                                            <div class="txt"><a href="javascript:void(0);"><img
+                                                        src="assets/img/m8Qy9DYIDky7rSa84XxEjoNkrej9WEbM.jpg"
+                                                        alt="메가박스 오리지널 티켓2"></a></div>
+                                            <div class="bg"><a href="javascript:void(0);"><img
+                                                        src="assets/img/VbcbcvxPT8k2RHGdBMSJNiKLDNZxOjUt.jpg"
+                                                        alt="미나리 오리지널 티켓"></a></div>
+                                        </div>
+                                    </div>
+                                    <div class="slider_item swiper-slide">
+                                        <div class="position">
+                                            <div class="txt"><a href="javascript:void(0);"><img
+                                                        src="assets/img/MHe13FdQ4HrDmRjTqSTDwmjhEYzDJg2O.jpg"
+                                                        alt="VIP 회원 혜택안내"></a></div>
+                                            <div class="bg"><a href="javascript:void(0);"><img
+                                                        src="assets/img/IDKGDlC8PfbWJuwP1ktKVa8W76gir0dA.jpg"
+                                                        alt="VIP 회원 혜택안내 이미지"></a></div>
+                                        </div>
+                                    </div>
+                                    <div class="slider_item swiper-slide">
+                                        <div class="position">
+                                            <div class="txt"><a href="#"><img
+                                                        src="assets/img/uQYOltgYXlQJdcY19SLdJ0lO5TMEL4pu.jpg"
+                                                        alt="메가박스 오리지널 티켓3"></a></div>
+                                            <div class="bg"><a href="#"><img
+                                                        src="assets/img/KzqmU6Eh95XFjhup3oIVr6H8CQBSmSD3.jpg"
+                                                        alt="톰과제리 오리지널 티켓"></a></div>
+                                        </div>
+                                    </div>
+                                    <div class="slider_item swiper-slide">
+                                        <div class="position">
+                                            <div class="txt"><a href="javascript:void(0);"><img
+                                                        src="assets/img/f7RPSplY1eWEFFhKNBDJK4JIXKv9NBZK.jpg"
+                                                        alt="U+멤버십 고객 영화 2천원 할인"></a></div>
+                                            <div class="bg"><a href="javascript:void(0);"><img
+                                                        src="assets/img/fZ8glF2ggujTRrF5vtRuE1iE2UjjV1oF.jpg"
+                                                        alt="U+멤버십"></a></div>
+                                        </div>
+                                    </div>
+                                    <div class="slider_item swiper-slide">
+                                        <div class="position">
+                                            <div class="txt"><a href="javascript:void(0);"><img
+                                                        src="assets/img/7VvUEVjOwHxMX3vTZk2mnnaW6PCgvE5M.jpg"
+                                                        alt="신규 & 휴면회원 혜택"></a></div>
+                                            <div class="bg"><a href="javascript:void(0);"><img
+                                                        src="assets/img/cDvPS75dX0cS2EHrpChZtqcn4apKHdq0.png"
+                                                        alt="신규 & 휴면회원 혜택 이미지"></a></div>
+                                        </div>
+                                    </div>
+                                    <div class="slider_item swiper-slide">
+                                        <div class="position">
+                                            <div class="txt"><a href="javascript:void(0);"><img
+                                                        src="assets/img/RmtM6PMyo9G9M62F7IUz3a25K6hH3ZFV.jpg"
+                                                        alt="메가박스 라이프 다이어리"></a></div>
+                                            <div class="bg"><a href="javascript:void(0);"><img
+                                                        src="assets/img/XdhkrMS8CsnIP7bR2oVbwrOizLCBuGfv.jpg"
+                                                        alt="라이프 다이어리 이미지"></a></div>
+                                        </div>
+                                    </div>
+                                    <div class="slider_item swiper-slide">
+                                        <div class="position">
+                                            <div class="txt"><a href="javascript:void(0);"><img
+                                                        src="assets/img/U3yNmqKAkk9NCSNMe8wOoYyEp4erJOuy.jpg"
+                                                        alt="매일매일 L포인트 2%적립"></a></div>
+                                            <div class="bg"><a href="javascript:void(0);"><img
+                                                        src="assets/img/NyVYX7lqdjM68x3qNmxGjvAMEkP3PYHi.jpg"
+                                                        alt="L포인트 이미지"></a></div>
+                                        </div>
+                                    </div>
+                                    <div class="slider_item swiper-slide">
+                                        <div class="position">
+                                            <div class="txt"><a href="javascript:void(0);"><img
+                                                        src="assets/img/fgQy66J460De1YuUdYg8LojfCzo48nbB.jpg"
+                                                        alt="현대카드 M포인트 금토일 5000원"></a></div>
+                                            <div class="bg"><a href="javascript:void(0);"><img
+                                                        src="assets/img/aY97qRe6764bp83rs8b8rtbt0lbC7eLn.jpg"
+                                                        alt="현대카드 이미지"></a></div>
+                                        </div>
+                                    </div>
+                                    <div class="slider_item swiper-slide">
+                                        <div class="position">
+                                            <div class="txt"><a href="javascript:void(0);"><img
+                                                        src="assets/img/5iEZxkffs0c8JrNa9vXdQwLixSXIJt13.jpg"
+                                                        alt="영화평론가 멤버십 이벤트"></a></div>
+                                            <div class="bg"><a href="javascript:void(0);"><img
+                                                        src="assets/img/B1inLjTCekxNqlv6sojWezVQYdLq1JGl.jpg"
+                                                        alt="멤버십 이벤트 이미지"></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider_util">
+                                    <div class="swiper-pagination"></div>
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                    <div class="slider-play"><a href="#" title="자동재생">자동재생</a></div>
+                                    <div class="slider-pause on"><a href="#" title="일시정지">일시정지</a></div>
+                                </div>
+                                <div class="swiper-scrollbar"></div>
+                            </div>
+                            <!-- //slider -->
+                            <!-- banner_ad -->
+                            <div class="banner_ad">
+                                <div class="ad_img">
+                                    <a href="javascript:void(0);" title="메인 혜택 우측배너영역">
+                                        <img src="assets/img/AD3520.png" alt="AD광고">
+                                        <img src="assets/img/821c52a6ddc4ea05034c1aac2ab0c759.jpg"
+                                            alt="메가박스 하우스 PC일반배너 아이씨유">
+                                    </a>
+                                </div>
+                                <div class="banner clearfix">
+                                    <a href="javascript:void(0);" class="size"><img
+                                            src="assets/img/9QskdwL1zUcEAJoueuLNvKzUHNsq3zcY.jpg"
+                                            alt="관람평쓰고 포인트 받자!"></a>
+                                    <a href="javascript:void(0);" class="size small"><img
+                                            src="assets/img/e3BLbNx56lNPYNrjtoiBKfg2e9cNTk3U.jpg"
+                                            alt="[롯데멤버스] L.POINT로 할인 받고 2% 적립까지!"></a>
+                                </div>
+                            </div>
+                            <!-- //banner_ad -->
+                            <!-- benefit_menu -->
+                            <div class="benefit_menu">
+                                <ul>
+                                    <li><a href="javascript:void(0);" title="VIP LOUNGE 페이지로 이동">VIP LOUNGE</a></li>
+                                    <li><a href="javascript:void(0);" title="멤버십 페이지로 이동">멤버십</a></li>
+                                    <li><a href="javascript:void(0);" title="할인카드안내 페이지로 이동">할인카드안내</a></li>
+                                    <li><a href="javascript:void(0);" title="이벤트 페이지로 이동">이벤트</a></li>
+                                    <li><a href="javascript:void(0);" title="스토어 페이지로 이동">스토어</a></li>
+                                </ul>
+                            </div>
+                            <!-- //benefit_menu -->
+                        </div>
+                        <!-- //wrap -->
+                    </div>
+                    <!-- //main_benefit section02-->
+
+                    <!-- main_curation section03-->
+                    <div id="main_section03" class="main_curation">
+                        <div class="wrap">
+                            <!-- curation_tit -->
+                            <div class="curation_tit clearfix">
+                                <h4>큐레이션</h4>
+                                <div class="tit_right">
+                                    <a href="javascript:void(0);" title="큐레이션 더보기">큐레이션 더보기<i class="icon"></i></a>
+                                </div>
+                            </div>
+                            <!-- //curation_tit -->
+                            <!-- curation_cont -->
+                            <div class="curation_cont">
+                                <div class="curr_img">
+                                    <p class="classic">메가박스 클래식소사이어티</p>
+                                    <a href="javascript:void(0);" title="영화상세 보기">
+                                        <img src="assets/img/0OqsG5xtNA9t858LSG9vyvBXHXz04ywL_420.jpg"
+                                            alt="[오페라] 피가로의 결혼@The Met">
+                                    </a>
+                                    <div class="curr_btn clearfix">
+                                        <ul>
+                                            <li><a href="javascript:void(0);" title="영화상세 보기">상세정보</a></li>
+                                            <li><a href="javascript:void(0);" title="영화 예매하기">예매</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="curr_info">
+                                    <p class="txt">#<span>클래식소사이어티</span></p>
+                                    <p class="tit">[오페라] 피가로의 결혼@The Met</p>
+                                    <p class="curr_summary">
+                                        [SEASON 2021 뉴욕 메트로폴리탄 오페라]<br><br>
+                                        코로나19 여파로 뉴욕 현지에서 오페라 공연이 진행되지 못하여, 2021 메트 오페라는
+                                        2010년대 이후 공연작 중 화제의 오페라를 엄선하여 상영합니다.<br><br>[상영 정보]<br>- 상영 일정 : 2021년 3월 2일 ~
+                                        2021년 5월 1일 / 화 19:00 (목동, 킨텍스, 센트럴 14:00), 토 14:00 상영<br>*거리두기 단계에 따라 평일 저녁 상영
+                                        시간은 조정될 수 있습니다.<br>- 상영 지점 : 목동, 성수, 센트럴, 코엑스, 분당, 킨텍스, 세종청사<br>- 러닝 타임 : 230분
+                                        *인터미션 있음<br>- 배급사 사정에 따라 상영 일정 및 지점 등이 변경될 수 있습니다.<br><br>[시놉시스]<br>간계와 속임수의
+                                        고수들이 펼치는 웃음 만발 결혼 프로젝트! 아이디어 넘치는 매력적인 이발사 피가로와 사랑에 몸살 난 10대 소년 케루비노. 자신의 신부를 노리는
+                                        바람둥이 주인에 맞서 결혼에 골인하려는 하인 피가로의 분투기를 다룬다. 1920년대 세비야 부잣집을 무대로 한 리처드 에어의 재기발랄한
+                                        프로덕션! <br><br>[작품소개]<br>메트의 음악감독 제임스 레바인이 모차르트 최고 걸작을 지휘한다. 연출을 맡은 리처드 에어는 19세기
+                                        세비야의 귀족 저택을 배경으로 한 고전적인 가정 희극으로 이 작품을 연출하면서 1920년대 후반의 부유층 집안으로 무대를 설정했다. 근사한
+                                        베이스바리톤 일다르 압드라자코브가 영리한 하인 피가로 역으로 출연진을 리드하고, 그의 신부 수잔나 역은 말리스 페테르젠, 바람둥이 백작 역은
+                                        페터 마테이, 그 때문에 속상한 백작부인 로지나 역은 마리나 포플라프스카야, 호색적인 젊은 시동은 이자벨 레오너드가 맡았다.
+                                        <br><br>수입/배급 (주)인스터글로벌</p>
+                                </div>
+                                <!-- curr_list -->
+                                <div class="curr_list clearfix">
+                                    <ul>
+                                        <li><a href="javascript:void(0);" title="영화상세 보기">
+                                                <img src="assets/img/lWgz9dycjnsv8nyAH7rKQJI2r7fqIZUb_230.jpg"
+                                                    alt="러빙 빈센트">
+                                                <p class="tit">러빙 빈센트</p>
+                                            </a></li>
+                                        <li><a href="javascript:void(0);" title="영화상세 보기">
+                                                <img src="assets/img/MB1o5Q3WNfzIymPV1K57Rps5ilRb7Zr0_230.jpg"
+                                                    alt="정말 먼 곳">
+                                                <p class="tit">정말 먼 곳</p>
+                                            </a></li>
+                                        <li><a href="javascript:void(0);" title="영화상세 보기">
+                                                <img src="assets/img/yznLm0478sEkw7A9Kpjs9Xn5Q9jrIG3o_230.jpg"
+                                                    alt="그리고 방행자">
+                                                <p class="tit">그리고 방행자</p>
+                                            </a></li>
+                                        <li><a href="javascript:void(0);" title="영화상세 보기">
+                                                <img src="assets/img/pcNkdKb9GRUvPb4vlJrXWAgdlbs9O1tg_230.jpg"
+                                                    alt="부활: 그 증거">
+                                                <p class="tit">부활: 그 증거</p>
+                                            </a></li>
+                                    </ul>
+                                </div>
+                                <!-- //curr_list -->
+                            </div>
+                            <!-- //curation_cont -->
+                        </div>
+                    </div>
+                    <!-- //main_curation section03-->
+
+                    <!-- main_info section04-->
+                    <div id="main_section04" class="main_info">
+                        <h5>메가박스 안내</h5>
+                        <!-- info_special -->
+                        <div class="info_special clearfix">
+                            <a href="javascript:void(0);" class="dolby" title="Dolby Cinema 페이지로 이동">Dolby Cinema</a>
+                            <a href="javascript:void(0);" class="private" title="THE BOUTIQUE PRIVATE 페이지로 이동">THE
+                                BOUTIQUE PRIVATE</a>
+                            <a href="javascript:void(0);" class="boutique" title="THE BOUTIQUE 페이지로 이동">THE BOUTIQUE</a>
+                            <a href="javascript:void(0);" class="bg_mx" title="MX 페이지로 이동">bg-mx</a>
+                            <a href="javascript:void(0);" class="comport" title="COMFORT 페이지로 이동">COMFORT</a>
+                            <a href="javascript:void(0);" class="kids" title="MEGABOX KIDS 페이지로 이동">MEGABOX KIDS</a>
+                        </div>
+                        <!-- //info_special -->
+                        <!-- info_notice -->
+                        <div class="info_notice">
+                            <div class="wrap">
+                                <p class="tit">메가박스</p>
+                                <p class="link">
+                                    <a href="javascript:void(0);" title="공지사항 상세보기">
+                                        <strong>
+                                            [공지]
+                                        </strong>
+                                        메가박스 개인정보 처리 방침 변경 안내</a>
+                                </p>
+                                <p class="date">2021.03.17</p>
+                                <p class="more">
+                                    <a href="javascript:void(0);" title="전체공지 더보기">더보기 <i class="icon"></i></a>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- //info_notice -->
+                        <!-- info_link -->
+                        <div class="info_link">
+                            <ul class="clearfix">
+                                <li><a href="javascript:void(0);" title="고객센터 페이지로 이동"><i
+                                            class="icon"></i><span>고객센터</span></a></li>
+                                <li><a href="javascript:void(0);" title="자주 묻는 질문 페이지로 이동"><i class="icon"></i><span>자주
+                                            묻는 질문</span></a></li>
+                                <li><a href="javascript:void(0);" title="1:1 문의 페이지로 이동"><i class="icon"></i><span>1:1
+                                            문의</span></a></li>
+                                <li><a href="javascript:void(0);" title="단체/대관문의 페이지로 이동"><i
+                                            class="icon"></i><span>단체/대관문의</span></a></li>
+                                <li><a href="javascript:void(0);" title="분실물 문의/접수 페이지로 이동"><i
+                                            class="icon"></i><span>분실물 문의/접수</span></a></li>
+                                <li><a href="javascript:void(0);" title="더 부티크 프라이빗 대관예매 페이지로 이동"><i
+                                            class="icon"></i><span>더 부티크 프라이빗<br>대관예매</span></a></li>
+                            </ul>
+                        </div>
+                        <!-- //info_link -->
+                    </div>
+                    <!-- //main_info section04-->
+                    <div class="main_bottom_ad">
+                        <a href="javascript:void(0);"><img src="assets/img/7dfaae10f66725318484e8161ad48681.jpg"
+                                alt="현대해상 PC일반배너 2103 자동차보험B 2"></a>
+                    </div>
+                </div>
+                <!-- //main_page -->
+            </div>
+        </div>
+        <!-- //contents -->
+        <!-- footer -->
+        <footer id="footer" class="clearfix">
+            <div class="footer_top">
+                <div class="wrap">
+                    <ul>
+                        <li><a href="javascript:void(0);" title="회사소개 페이지로 이동">회사소개</a></li>
+                        <li><a href="javascript:void(0);" title="인재채용 페이지로 이동">인재채용</a></li>
+                        <li><a href="javascript:void(0);" title="사회공헌 페이지로 이동">사회공헌</a></li>
+                        <li><a href="javascript:void(0);" title="제휴/광고/부대사업문의 페이지로 이동">제휴/광고/부대사업문의</a></li>
+                        <li><a href="javascript:void(0);" title="이용약관 페이지로 이동">이용약관</a></li>
+                        <li><a href="javascript:void(0);" title="개인정보처리방침 페이지로 이동"><span>개인정보처리방침</span></a></li>
+                        <li><a href="javascript:void(0);" title="윤리경영 페이지로 이동">윤리경영</a></li>
+                    </ul>
+                    <a href="#" title="극장찾기"><i class="icon"></i>극장찾기</a>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="wrap">
+                    <h6 class="foot_logo">MEGABOX : Life Theater</h6>
+                    <div class="footer_info">
+                        <div>
+                            <address>서울특별시 마포구 월드컵로 240, 지상2층(성산동, 월드컵주경기장)</address>
+                            <p>ARS 1544-0070</p>
+                        </div>
+                        <p>
+                            대표자명 김진선 · 개인정보보호책임자 조상연 · 사업자등록번호 211-86-59478 · 통신판매업신고번호 제 833호
+                        </p>
+                        <p>COPYRIGHT © MegaboxJoongAng, Inc. All rights reserved</p>
+                    </div>
+                    <div class="footer_sns">
+                        <a href="javascript:void(0);" title="MEGABOX 트위터 페이지로 이동">트위터</a>
+                        <a href="javascript:void(0);" title="MEGABOX 페이스북 페이지로 이동">페이스북</a>
+                        <a href="javascript:void(0);" title="MEGABOX 인스타그램 페이지로 이동">인스타그램</a>
+                        <a href="javascript:void(0);" title="MEGABOX 구글플레이 페이지로 이동">구글플레이</a>
+                        <a href="javascript:void(0);" title="MEGABOX 앱스토어 페이지로 이동">앱스토어</a>
+                    </div>
+                </div>
+            </div>
+            <div class="layer_theater">
+                <div class="wrap">
+                    <a href="" class="link_acc" title="메가박스 극장찾기 레이어 입니다.">메가박스 극장찾기 레이어 입니다.</a>
+                    <p class="tit">메가박스 극장 찾기</p>
+                    <!-- list -->
+                    <ul class="list">
+                        <li>
+                            <p class="loca">서울</p>
+                            <div class="cont">
+                                <a href="javascript:void(0);" title="강남 상세보기">강남</a>
+                                <a href="javascript:void(0);" title="강남대로(씨티) 상세보기">강남대로(씨티)</a>
+                                <a href="javascript:void(0);" title="강동 상세보기">강동</a>
+                                <a href="javascript:void(0);" title="군자 상세보기">군자</a>
+                                <a href="javascript:void(0);" title="동대문 상세보기">동대문</a>
+                                <a href="javascript:void(0);" title="마곡 상세보기">마곡</a>
+                                <a href="javascript:void(0);" title="목동 상세보기">목동</a>
+                                <a href="javascript:void(0);" title="상봉 상세보기">상봉</a>
+                                <a href="javascript:void(0);" title="상암월드컵경기장 상세보기">상암월드컵경기장</a>
+                                <a href="javascript:void(0);" title="성수 상세보기">성수</a>
+                                <a href="javascript:void(0);" title="센트럴 상세보기">센트럴</a>
+                                <a href="javascript:void(0);" title="송파파크하비오 상세보기">송파파크하비오</a>
+                                <a href="javascript:void(0);" title="신촌 상세보기">신촌</a>
+                                <a href="javascript:void(0);" title="이수 상세보기">이수</a>
+                                <a href="javascript:void(0);" title="창동 상세보기">창동</a>
+                                <a href="javascript:void(0);" title="코엑스 상세보기">코엑스</a>
+                                <a href="javascript:void(0);" title="홍대 상세보기">홍대</a>
+                                <a href="javascript:void(0);" title="화곡 상세보기">화곡</a>
+                                <a href="javascript:void(0);" title="ARTNINE 상세보기">ARTNINE</a>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="loca">경기</p>
+                            <div class="cont">
+                                <a href="javascript:void(0);" title="고양스타필드 상세보기">고양스타필드</a>
+                                <a href="javascript:void(0);" title="김포한강신도시 상세보기">김포한강신도시</a>
+                                <a href="javascript:void(0);" title="남양주 상세보기">남양주</a>
+                                <a href="javascript:void(0);" title="남양주현대아울렛 스페이스원 상세보기">남양주현대아울렛 스페이스원</a>
+                                <a href="javascript:void(0);" title="동탄 상세보기">동탄</a>
+                                <a href="javascript:void(0);" title="미사강변 상세보기">미사강변</a>
+                                <a href="javascript:void(0);" title="백석 상세보기">백석</a>
+                                <a href="javascript:void(0);" title="별내 상세보기">별내</a>
+                                <a href="javascript:void(0);" title="부천스타필드시티 상세보기">부천스타필드시티</a>
+                                <a href="javascript:void(0);" title="분당 상세보기">분당</a>
+                                <a href="javascript:void(0);" title="수원 상세보기">수원</a>
+                                <a href="javascript:void(0);" title="수원남문 상세보기">수원남문</a>
+                                <a href="javascript:void(0);" title="시흥배곧 상세보기">시흥배곧</a>
+                                <a href="javascript:void(0);" title="안산중앙 상세보기">안산중앙</a>
+                                <a href="javascript:void(0);" title="안성스타필드 상세보기">안성스타필드</a>
+                                <a href="javascript:void(0);" title="양주 상세보기">양주</a>
+                                <a href="javascript:void(0);" title="영통 상세보기">영통</a>
+                                <a href="javascript:void(0);" title="용인기흥 상세보기">용인기흥</a>
+                                <a href="javascript:void(0);" title="용인테크노밸리 상세보기">용인테크노밸리</a>
+                                <a href="javascript:void(0);" title="의정부민락 상세보기">의정부민락</a>
+                                <a href="javascript:void(0);" title="일산 상세보기">일산</a>
+                                <a href="javascript:void(0);" title="일산벨라시타 상세보기">일산벨라시타</a>
+                                <a href="javascript:void(0);" title="킨텍스 상세보기">킨텍스</a>
+                                <a href="javascript:void(0);" title="파주금촌 상세보기">파주금촌</a>
+                                <a href="javascript:void(0);" title="파주운정 상세보기">파주운정</a>
+                                <a href="javascript:void(0);" title="파주출판도시 상세보기">파주출판도시</a>
+                                <a href="javascript:void(0);" title="평택 상세보기">평택</a>
+                                <a href="javascript:void(0);" title="하남스타필드 상세보기">하남스타필드</a>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="loca">인천</p>
+                            <div class="cont">
+                                <a href="javascript:void(0);" title="검단 상세보기">검단</a>
+                                <a href="javascript:void(0);" title="송도 상세보기">송도</a>
+                                <a href="javascript:void(0);" title="영종 상세보기">영종</a>
+                                <a href="javascript:void(0);" title="인천논현 상세보기">인천논현</a>
+                                <a href="javascript:void(0);" title="청라지젤 상세보기">청라지젤</a>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="loca">대전/충청/세종</p>
+                            <div class="cont">
+                                <a href="javascript:void(0);" title="공주 상세보기">공주</a>
+                                <a href="javascript:void(0);" title="논산 상세보기">논산</a>
+                                <a href="javascript:void(0);" title="대전 상세보기">대전</a>
+                                <a href="javascript:void(0);" title="대전유성 상세보기">대전유성</a>
+                                <a href="javascript:void(0);" title="대전중앙로 상세보기">대전중앙로</a>
+                                <a href="javascript:void(0);" title="대전현대아울렛 상세보기">대전현대아울렛</a>
+                                <a href="javascript:void(0);" title="세종(조치원) 상세보기">세종(조치원)</a>
+                                <a href="javascript:void(0);" title="세종나성 상세보기">세종나성</a>
+                                <a href="javascript:void(0);" title="세종청사 상세보기">세종청사</a>
+                                <a href="javascript:void(0);" title="오창 상세보기">오창</a>
+                                <a href="javascript:void(0);" title="제천 상세보기">제천</a>
+                                <a href="javascript:void(0);" title="진천 상세보기">진천</a>
+                                <a href="javascript:void(0);" title="천안 상세보기">천안</a>
+                                <a href="javascript:void(0);" title="청주사창 상세보기">청주사창</a>
+                                <a href="javascript:void(0);" title="충주 상세보기">충주</a>
+                                <a href="javascript:void(0);" title="홍성내포 상세보기">홍성내포</a>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="loca">부산/대구/경상</p>
+                            <div class="cont">
+                                <a href="javascript:void(0);" title="경북도청 상세보기">경북도청</a>
+                                <a href="javascript:void(0);" title="경산하양 상세보기">경산하양</a>
+                                <a href="javascript:void(0);" title="구미강동 상세보기">구미강동</a>
+                                <a href="javascript:void(0);" title="김천 상세보기">김천</a>
+                                <a href="javascript:void(0);" title="남포항 상세보기">남포항</a>
+                                <a href="javascript:void(0);" title="대구(칠성로) 상세보기">대구(칠성로)</a>
+                                <a href="javascript:void(0);" title="대구신세계(동대구) 상세보기">대구신세계(동대구)</a>
+                                <a href="javascript:void(0);" title="대구이시아 상세보기">대구이시아</a>
+                                <a href="javascript:void(0);" title="덕천 상세보기">덕천</a>
+                                <a href="javascript:void(0);" title="마산 상세보기">마산</a>
+                                <a href="javascript:void(0);" title="문경 상세보기">문경</a>
+                                <a href="javascript:void(0);" title="부산극장 상세보기">부산극장</a>
+                                <a href="javascript:void(0);" title="부산대 상세보기">부산대</a>
+                                <a href="javascript:void(0);" title="북대구(칠곡) 상세보기">북대구(칠곡)</a>
+                                <a href="javascript:void(0);" title="삼천포 상세보기">삼천포</a>
+                                <a href="javascript:void(0);" title="양산 상세보기">양산</a>
+                                <a href="javascript:void(0);" title="양산라피에스타 상세보기">양산라피에스타</a>
+                                <a href="javascript:void(0);" title="울산 상세보기">울산</a>
+                                <a href="javascript:void(0);" title="정관 상세보기">정관</a>
+                                <a href="javascript:void(0);" title="창원 상세보기">창원</a>
+                                <a href="javascript:void(0);" title="창원내서 상세보기">창원내서</a>
+                                <a href="javascript:void(0);" title="해운대(장산) 상세보기">해운대(장산)</a>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="loca">광주/전라</p>
+                            <div class="cont">
+                                <a href="javascript:void(0);" title="광주상무 상세보기">광주상무</a>
+                                <a href="javascript:void(0);" title="광주하남 상세보기">광주하남</a>
+                                <a href="javascript:void(0);" title="목포하당(포르모) 상세보기">목포하당(포르모)</a>
+                                <a href="javascript:void(0);" title="송천 상세보기">송천</a>
+                                <a href="javascript:void(0);" title="순천 상세보기">순천</a>
+                                <a href="javascript:void(0);" title="여수웅천 상세보기">여수웅천</a>
+                                <a href="javascript:void(0);" title="전대(광주) 상세보기">전대(광주)</a>
+                                <a href="javascript:void(0);" title="전주혁신 상세보기">전주혁신</a>
+                                <a href="javascript:void(0);" title="첨단 상세보기">첨단</a>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="loca">강원</p>
+                            <div class="cont">
+                                <a href="javascript:void(0);" title="남춘천 상세보기">남춘천</a>
+                                <a href="javascript:void(0);" title="속초 상세보기">속초</a>
+                                <a href="javascript:void(0);" title="원주 상세보기">원주</a>
+                                <a href="javascript:void(0);" title="원주센트럴 상세보기">원주센트럴</a>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="loca">제주</p>
+                            <div class="cont">
+                                <a href="javascript:void(0);" title="제주 상세보기">제주</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <!--// list -->
+                    <button type="button" class="footer_btn">메가박스 극장찾기 닫기</button>
+                </div>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+
+    <!-- script -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/megabox.js"></script>
+    <!-- //script -->
+</body>
+
+</html>
