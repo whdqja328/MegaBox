@@ -2,12 +2,14 @@
 /* 여백 초기화 */
 body,div,ul,li,dl,dd,dt,ol,h1,h2,h3,h4,h5,h6,input,ul,li,
 fieldset,legend,p,select,table,th,td,tr,textarea,button,form,figure,figcaption{
-    margin:0; padding:0;}
+    margin:0; padding:0; }
+*{
+    box-sizing: border-box;
+}
 
 header#header {top: 0 !important;}
 #header.header {position:absolute; left:0; right:inherit; top:80px; width:100%; z-index:100;}
 
-* {box-sizing: border-box;}
 /* a 링크 초기화 */
 a {color: inherit; text-decoration: none; cursor: pointer;}
 
