@@ -6,15 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="lee1993">
-    <meta name="description" content="사이트 따라만들기, 클론코딩, HTML5, CSS3, JavaScript, jQuery, 기업사이트 제작">
-    <meta name="keywords" content="메가박스 사이트 따라만들기, HTML5, CSS3, JavaScript, jQuery">
+    <meta name="description" content="클론코딩, HTML5, CSS3, JavaScript">
+    <meta name="keywords" content="클론코딩, HTML5, CSS3, JavaScript">
     <title>라이프시어터,메가박스</title>
     <!-- 파비콘 -->
-    <link rel="shortcut icon" href="assets/img/favicon.ico">
+    <!-- <link rel="shortcut icon" href="assets/img/favicon.ico"> -->
     <!-- 스타일시트 -->
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <!-- 웹 폰트 -->
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css">
@@ -55,17 +54,17 @@
                 </div>
             </div>
             <div class="link_area clearfix">
-                <a href="#layer_sitemap" class="btn_sitemap" title="사이트맵">사이트맵</a>
-                <a href="#layer_search" class="btn_search" title="검색">검색</a>
+                <a class="btn_sitemap" data-filter="#layer_sitemap" title="사이트맵">사이트맵</a>
+                <a class="btn_search" data-filter="#layer_search" title="검색">검색</a>
                 <a href="#" class="btn_ticket" title="상영시간표">상영시간표</a>
-                <a href="#layer_mymega" class="btn_mymega" title="메가박스">나의 메가박스</a>
+                <a class="btn_mymega" data-filter="#layer_mymega"  title="메가박스">나의 메가박스</a>
             </div>
             <!-- //util_area -->
             <!-- nav -->
             <nav id="gnb">
                 <ul class="gnb_depth1">
                     <li>
-                        <a href="#" class="gnb_movie" title="영화">영화</a>
+                        <a href="#" data-value="gnb_movie" class="gnb_movie" title="영화">영화</a>
                         <div class="gnb_depth2">
                             <ul>
                                 <li><a href="#" title="전체영화">전체영화</a></li>
@@ -76,7 +75,7 @@
                         </div>
                     </li>
                     <li>
-                        <a href="#" class="gnb_reserve" title="예매">예매</a>
+                        <a href="#" data-value="gnb_reserve" class="gnb_reserve" title="예매">예매</a>
                         <div class="gnb_depth2">
                             <ul>
                                 <li><a href="#" title="빠른예매">빠른예매</a></li>
@@ -86,7 +85,7 @@
                         </div>
                     </li>
                     <li>
-                        <a href="#" class="gnb_theater" title="극장">극장</a>
+                        <a href="#" data-value="gnb_theater" class="gnb_theater" title="극장">극장</a>
                         <div class="gnb_depth2">
                             <ul>
                                 <li><a href="#" title="전체극장">전체극장</a></li>
@@ -95,7 +94,7 @@
                         </div>
                     </li>
                     <li>
-                        <a href="#" class="gnb_event" title="이벤트">이벤트</a>
+                        <a href="#" data-value="gnb_event" class="gnb_event" title="이벤트">이벤트</a>
                         <div class="gnb_depth2">
                             <ul>
                                 <li><a href="#" title="진행중 이벤트">진행중 이벤트</a></li>
@@ -106,7 +105,7 @@
                     </li>
                     <li><a href="#" class="gnb_store" title="스토어">스토어</a></li>
                     <li>
-                        <a href="#" class="gnb_benefit" title="혜택">혜택</a>
+                        <a href="#" data-value="gnb_benefit" class="gnb_benefit" title="혜택">혜택</a>
                         <div class="gnb_depth2">
                             <ul>
                                 <li><a href="#" title="메가박스 멤버십">메가박스 멤버십</a></li>
@@ -118,7 +117,7 @@
             </nav>
             <!-- //nav -->
             <!-- layer_sitemap -->
-            <div id="layer_sitemap">
+            <div id="layer_sitemap" data-type="#layer_sitemap">
                 <div class="wrap">
                     <a href="#" class="ir_so" title="사이트맵 레이어 입니다.">사이트맵 레이어 입니다.</a>
                     <p class="tit">SITEMAP</p>
@@ -227,7 +226,7 @@
             </div>
             <!-- //layer_sitemap -->
             <!-- layer_search -->
-            <div id="layer_search">
+            <div id="layer_search" data-type="#layer_search">
                 <div class="wrap">
                     <a href="#" class="ir_so" title="검색 레이어 입니다.">검색 레이어 입니다.</a>
                     <div class="tab_rank">
@@ -272,7 +271,7 @@
             </div>
             <!-- //layer_search -->
             <!-- layer_mypage -->
-            <div id="layer_mymega">
+            <div id="layer_mymega" data-type="#layer_mymega">
                 <a href="#" class="ir_so" title="나의 메가박스 레이어 입니다.">나의 메가박스 레이어 입니다.</a>
                 <div class="wrap">
                     <div class="login_before">
@@ -486,7 +485,7 @@
                             <!-- benefit_tit -->
                             <div class="benefit_tit clearfix">
                                 <h3 class="tit">혜택</h3>
-                                <a href="javascript:void(0);" title="혜택 더보기">더보기</a>
+                                <a href="#" title="혜택 더보기">더보기</a>
                             </div>
                             <!-- //benefit_tit -->
                             <!-- slider -->
@@ -494,30 +493,30 @@
                                 <div class="slider_view swiper-wrapper">
                                     <div class="slider_item swiper-slide">
                                         <div class="position">
-                                            <div class="txt"><a href="javascript:void(0);"><img
+                                            <div class="txt"><a href="#"><img
                                                         src="assets/img/UcTpfVhW4MICH3HivJyTvC3xeZJgVfAC.jpg"
                                                         alt="메가박스 오리지널 티켓1"></a></div>
-                                            <div class="bg"><a href="javascript:void(0);"><img
+                                            <div class="bg"><a href="#"><img
                                                         src="assets/img/zA4dAn89GfHlrBhBdgYrzV7Kre8sgQRQ.png"
                                                         alt="반지의 제왕 오리지널 티켓"></a></div>
                                         </div>
                                     </div>
                                     <div class="slider_item swiper-slide">
                                         <div class="position">
-                                            <div class="txt"><a href="javascript:void(0);"><img
+                                            <div class="txt"><a href="#"><img
                                                         src="assets/img/m8Qy9DYIDky7rSa84XxEjoNkrej9WEbM.jpg"
                                                         alt="메가박스 오리지널 티켓2"></a></div>
-                                            <div class="bg"><a href="javascript:void(0);"><img
+                                            <div class="bg"><a href="#"><img
                                                         src="assets/img/VbcbcvxPT8k2RHGdBMSJNiKLDNZxOjUt.jpg"
                                                         alt="미나리 오리지널 티켓"></a></div>
                                         </div>
                                     </div>
                                     <div class="slider_item swiper-slide">
                                         <div class="position">
-                                            <div class="txt"><a href="javascript:void(0);"><img
+                                            <div class="txt"><a href="#"><img
                                                         src="assets/img/MHe13FdQ4HrDmRjTqSTDwmjhEYzDJg2O.jpg"
                                                         alt="VIP 회원 혜택안내"></a></div>
-                                            <div class="bg"><a href="javascript:void(0);"><img
+                                            <div class="bg"><a href="#"><img
                                                         src="assets/img/IDKGDlC8PfbWJuwP1ktKVa8W76gir0dA.jpg"
                                                         alt="VIP 회원 혜택안내 이미지"></a></div>
                                         </div>
@@ -534,60 +533,60 @@
                                     </div>
                                     <div class="slider_item swiper-slide">
                                         <div class="position">
-                                            <div class="txt"><a href="javascript:void(0);"><img
+                                            <div class="txt"><a href="#"><img
                                                         src="assets/img/f7RPSplY1eWEFFhKNBDJK4JIXKv9NBZK.jpg"
                                                         alt="U+멤버십 고객 영화 2천원 할인"></a></div>
-                                            <div class="bg"><a href="javascript:void(0);"><img
+                                            <div class="bg"><a href="#"><img
                                                         src="assets/img/fZ8glF2ggujTRrF5vtRuE1iE2UjjV1oF.jpg"
                                                         alt="U+멤버십"></a></div>
                                         </div>
                                     </div>
                                     <div class="slider_item swiper-slide">
                                         <div class="position">
-                                            <div class="txt"><a href="javascript:void(0);"><img
+                                            <div class="txt"><a href="#"><img
                                                         src="assets/img/7VvUEVjOwHxMX3vTZk2mnnaW6PCgvE5M.jpg"
                                                         alt="신규 & 휴면회원 혜택"></a></div>
-                                            <div class="bg"><a href="javascript:void(0);"><img
+                                            <div class="bg"><a href="#"><img
                                                         src="assets/img/cDvPS75dX0cS2EHrpChZtqcn4apKHdq0.png"
                                                         alt="신규 & 휴면회원 혜택 이미지"></a></div>
                                         </div>
                                     </div>
                                     <div class="slider_item swiper-slide">
                                         <div class="position">
-                                            <div class="txt"><a href="javascript:void(0);"><img
+                                            <div class="txt"><a href="#"><img
                                                         src="assets/img/RmtM6PMyo9G9M62F7IUz3a25K6hH3ZFV.jpg"
                                                         alt="메가박스 라이프 다이어리"></a></div>
-                                            <div class="bg"><a href="javascript:void(0);"><img
+                                            <div class="bg"><a href="#"><img
                                                         src="assets/img/XdhkrMS8CsnIP7bR2oVbwrOizLCBuGfv.jpg"
                                                         alt="라이프 다이어리 이미지"></a></div>
                                         </div>
                                     </div>
                                     <div class="slider_item swiper-slide">
                                         <div class="position">
-                                            <div class="txt"><a href="javascript:void(0);"><img
+                                            <div class="txt"><a href="#"><img
                                                         src="assets/img/U3yNmqKAkk9NCSNMe8wOoYyEp4erJOuy.jpg"
                                                         alt="매일매일 L포인트 2%적립"></a></div>
-                                            <div class="bg"><a href="javascript:void(0);"><img
+                                            <div class="bg"><a href="#"><img
                                                         src="assets/img/NyVYX7lqdjM68x3qNmxGjvAMEkP3PYHi.jpg"
                                                         alt="L포인트 이미지"></a></div>
                                         </div>
                                     </div>
                                     <div class="slider_item swiper-slide">
                                         <div class="position">
-                                            <div class="txt"><a href="javascript:void(0);"><img
+                                            <div class="txt"><a href="#"><img
                                                         src="assets/img/fgQy66J460De1YuUdYg8LojfCzo48nbB.jpg"
                                                         alt="현대카드 M포인트 금토일 5000원"></a></div>
-                                            <div class="bg"><a href="javascript:void(0);"><img
+                                            <div class="bg"><a href="#"><img
                                                         src="assets/img/aY97qRe6764bp83rs8b8rtbt0lbC7eLn.jpg"
                                                         alt="현대카드 이미지"></a></div>
                                         </div>
                                     </div>
                                     <div class="slider_item swiper-slide">
                                         <div class="position">
-                                            <div class="txt"><a href="javascript:void(0);"><img
+                                            <div class="txt"><a href="#"><img
                                                         src="assets/img/5iEZxkffs0c8JrNa9vXdQwLixSXIJt13.jpg"
                                                         alt="영화평론가 멤버십 이벤트"></a></div>
-                                            <div class="bg"><a href="javascript:void(0);"><img
+                                            <div class="bg"><a href="#"><img
                                                         src="assets/img/B1inLjTCekxNqlv6sojWezVQYdLq1JGl.jpg"
                                                         alt="멤버십 이벤트 이미지"></a></div>
                                         </div>
@@ -606,17 +605,17 @@
                             <!-- banner_ad -->
                             <div class="banner_ad">
                                 <div class="ad_img">
-                                    <a href="javascript:void(0);" title="메인 혜택 우측배너영역">
+                                    <a href="#" title="메인 혜택 우측배너영역">
                                         <img src="assets/img/AD3520.png" alt="AD광고">
                                         <img src="assets/img/821c52a6ddc4ea05034c1aac2ab0c759.jpg"
                                             alt="메가박스 하우스 PC일반배너 아이씨유">
                                     </a>
                                 </div>
                                 <div class="banner clearfix">
-                                    <a href="javascript:void(0);" class="size"><img
+                                    <a href="#" class="size"><img
                                             src="assets/img/9QskdwL1zUcEAJoueuLNvKzUHNsq3zcY.jpg"
                                             alt="관람평쓰고 포인트 받자!"></a>
-                                    <a href="javascript:void(0);" class="size small"><img
+                                    <a href="#" class="size small"><img
                                             src="assets/img/e3BLbNx56lNPYNrjtoiBKfg2e9cNTk3U.jpg"
                                             alt="[롯데멤버스] L.POINT로 할인 받고 2% 적립까지!"></a>
                                 </div>
@@ -625,11 +624,11 @@
                             <!-- benefit_menu -->
                             <div class="benefit_menu">
                                 <ul>
-                                    <li><a href="javascript:void(0);" title="VIP LOUNGE 페이지로 이동">VIP LOUNGE</a></li>
-                                    <li><a href="javascript:void(0);" title="멤버십 페이지로 이동">멤버십</a></li>
-                                    <li><a href="javascript:void(0);" title="할인카드안내 페이지로 이동">할인카드안내</a></li>
-                                    <li><a href="javascript:void(0);" title="이벤트 페이지로 이동">이벤트</a></li>
-                                    <li><a href="javascript:void(0);" title="스토어 페이지로 이동">스토어</a></li>
+                                    <li><a href="#" title="VIP LOUNGE 페이지로 이동">VIP LOUNGE</a></li>
+                                    <li><a href="#" title="멤버십 페이지로 이동">멤버십</a></li>
+                                    <li><a href="#" title="할인카드안내 페이지로 이동">할인카드안내</a></li>
+                                    <li><a href="#" title="이벤트 페이지로 이동">이벤트</a></li>
+                                    <li><a href="#" title="스토어 페이지로 이동">스토어</a></li>
                                 </ul>
                             </div>
                             <!-- //benefit_menu -->
@@ -645,7 +644,7 @@
                             <div class="curation_tit clearfix">
                                 <h4>큐레이션</h4>
                                 <div class="tit_right">
-                                    <a href="javascript:void(0);" title="큐레이션 더보기">큐레이션 더보기<i class="icon"></i></a>
+                                    <a href="#" title="큐레이션 더보기">큐레이션 더보기<i class="icon"></i></a>
                                 </div>
                             </div>
                             <!-- //curation_tit -->
@@ -653,14 +652,14 @@
                             <div class="curation_cont">
                                 <div class="curr_img">
                                     <p class="classic">메가박스 클래식소사이어티</p>
-                                    <a href="javascript:void(0);" title="영화상세 보기">
+                                    <a href="#" title="영화상세 보기">
                                         <img src="assets/img/0OqsG5xtNA9t858LSG9vyvBXHXz04ywL_420.jpg"
                                             alt="[오페라] 피가로의 결혼@The Met">
                                     </a>
                                     <div class="curr_btn clearfix">
                                         <ul>
-                                            <li><a href="javascript:void(0);" title="영화상세 보기">상세정보</a></li>
-                                            <li><a href="javascript:void(0);" title="영화 예매하기">예매</a></li>
+                                            <li><a href="#" title="영화상세 보기">상세정보</a></li>
+                                            <li><a href="#" title="영화 예매하기">예매</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -685,22 +684,22 @@
                                 <!-- curr_list -->
                                 <div class="curr_list clearfix">
                                     <ul>
-                                        <li><a href="javascript:void(0);" title="영화상세 보기">
+                                        <li><a href="#" title="영화상세 보기">
                                                 <img src="assets/img/lWgz9dycjnsv8nyAH7rKQJI2r7fqIZUb_230.jpg"
                                                     alt="러빙 빈센트">
                                                 <p class="tit">러빙 빈센트</p>
                                             </a></li>
-                                        <li><a href="javascript:void(0);" title="영화상세 보기">
+                                        <li><a href="#" title="영화상세 보기">
                                                 <img src="assets/img/MB1o5Q3WNfzIymPV1K57Rps5ilRb7Zr0_230.jpg"
                                                     alt="정말 먼 곳">
                                                 <p class="tit">정말 먼 곳</p>
                                             </a></li>
-                                        <li><a href="javascript:void(0);" title="영화상세 보기">
+                                        <li><a href="#" title="영화상세 보기">
                                                 <img src="assets/img/yznLm0478sEkw7A9Kpjs9Xn5Q9jrIG3o_230.jpg"
                                                     alt="그리고 방행자">
                                                 <p class="tit">그리고 방행자</p>
                                             </a></li>
-                                        <li><a href="javascript:void(0);" title="영화상세 보기">
+                                        <li><a href="#" title="영화상세 보기">
                                                 <img src="assets/img/pcNkdKb9GRUvPb4vlJrXWAgdlbs9O1tg_230.jpg"
                                                     alt="부활: 그 증거">
                                                 <p class="tit">부활: 그 증거</p>
@@ -719,13 +718,13 @@
                         <h5>메가박스 안내</h5>
                         <!-- info_special -->
                         <div class="info_special clearfix">
-                            <a href="javascript:void(0);" class="dolby" title="Dolby Cinema 페이지로 이동">Dolby Cinema</a>
-                            <a href="javascript:void(0);" class="private" title="THE BOUTIQUE PRIVATE 페이지로 이동">THE
+                            <a href="#" class="dolby" title="Dolby Cinema 페이지로 이동">Dolby Cinema</a>
+                            <a href="#" class="private" title="THE BOUTIQUE PRIVATE 페이지로 이동">THE
                                 BOUTIQUE PRIVATE</a>
-                            <a href="javascript:void(0);" class="boutique" title="THE BOUTIQUE 페이지로 이동">THE BOUTIQUE</a>
-                            <a href="javascript:void(0);" class="bg_mx" title="MX 페이지로 이동">bg-mx</a>
-                            <a href="javascript:void(0);" class="comport" title="COMFORT 페이지로 이동">COMFORT</a>
-                            <a href="javascript:void(0);" class="kids" title="MEGABOX KIDS 페이지로 이동">MEGABOX KIDS</a>
+                            <a href="#" class="boutique" title="THE BOUTIQUE 페이지로 이동">THE BOUTIQUE</a>
+                            <a href="#" class="bg_mx" title="MX 페이지로 이동">bg-mx</a>
+                            <a href="#" class="comport" title="COMFORT 페이지로 이동">COMFORT</a>
+                            <a href="#" class="kids" title="MEGABOX KIDS 페이지로 이동">MEGABOX KIDS</a>
                         </div>
                         <!-- //info_special -->
                         <!-- info_notice -->
@@ -733,7 +732,7 @@
                             <div class="wrap">
                                 <p class="tit">메가박스</p>
                                 <p class="link">
-                                    <a href="javascript:void(0);" title="공지사항 상세보기">
+                                    <a href="#" title="공지사항 상세보기">
                                         <strong>
                                             [공지]
                                         </strong>
@@ -741,7 +740,7 @@
                                 </p>
                                 <p class="date">2021.03.17</p>
                                 <p class="more">
-                                    <a href="javascript:void(0);" title="전체공지 더보기">더보기 <i class="icon"></i></a>
+                                    <a href="#" title="전체공지 더보기">더보기 <i class="icon"></i></a>
                                 </p>
                             </div>
                         </div>
@@ -749,17 +748,17 @@
                         <!-- info_link -->
                         <div class="info_link">
                             <ul class="clearfix">
-                                <li><a href="javascript:void(0);" title="고객센터 페이지로 이동"><i
+                                <li><a href="#" title="고객센터 페이지로 이동"><i
                                             class="icon"></i><span>고객센터</span></a></li>
-                                <li><a href="javascript:void(0);" title="자주 묻는 질문 페이지로 이동"><i class="icon"></i><span>자주
+                                <li><a href="#" title="자주 묻는 질문 페이지로 이동"><i class="icon"></i><span>자주
                                             묻는 질문</span></a></li>
-                                <li><a href="javascript:void(0);" title="1:1 문의 페이지로 이동"><i class="icon"></i><span>1:1
+                                <li><a href="#" title="1:1 문의 페이지로 이동"><i class="icon"></i><span>1:1
                                             문의</span></a></li>
-                                <li><a href="javascript:void(0);" title="단체/대관문의 페이지로 이동"><i
+                                <li><a href="#" title="단체/대관문의 페이지로 이동"><i
                                             class="icon"></i><span>단체/대관문의</span></a></li>
-                                <li><a href="javascript:void(0);" title="분실물 문의/접수 페이지로 이동"><i
+                                <li><a href="#" title="분실물 문의/접수 페이지로 이동"><i
                                             class="icon"></i><span>분실물 문의/접수</span></a></li>
-                                <li><a href="javascript:void(0);" title="더 부티크 프라이빗 대관예매 페이지로 이동"><i
+                                <li><a href="#" title="더 부티크 프라이빗 대관예매 페이지로 이동"><i
                                             class="icon"></i><span>더 부티크 프라이빗<br>대관예매</span></a></li>
                             </ul>
                         </div>
@@ -767,7 +766,7 @@
                     </div>
                     <!-- //main_info section04-->
                     <div class="main_bottom_ad">
-                        <a href="javascript:void(0);"><img src="assets/img/7dfaae10f66725318484e8161ad48681.jpg"
+                        <a href="#"><img src="assets/img/7dfaae10f66725318484e8161ad48681.jpg"
                                 alt="현대해상 PC일반배너 2103 자동차보험B 2"></a>
                     </div>
                 </div>
@@ -780,13 +779,13 @@
             <div class="footer_top">
                 <div class="wrap">
                     <ul>
-                        <li><a href="javascript:void(0);" title="회사소개 페이지로 이동">회사소개</a></li>
-                        <li><a href="javascript:void(0);" title="인재채용 페이지로 이동">인재채용</a></li>
-                        <li><a href="javascript:void(0);" title="사회공헌 페이지로 이동">사회공헌</a></li>
-                        <li><a href="javascript:void(0);" title="제휴/광고/부대사업문의 페이지로 이동">제휴/광고/부대사업문의</a></li>
-                        <li><a href="javascript:void(0);" title="이용약관 페이지로 이동">이용약관</a></li>
-                        <li><a href="javascript:void(0);" title="개인정보처리방침 페이지로 이동"><span>개인정보처리방침</span></a></li>
-                        <li><a href="javascript:void(0);" title="윤리경영 페이지로 이동">윤리경영</a></li>
+                        <li><a href="#" title="회사소개 페이지로 이동">회사소개</a></li>
+                        <li><a href="#" title="인재채용 페이지로 이동">인재채용</a></li>
+                        <li><a href="#" title="사회공헌 페이지로 이동">사회공헌</a></li>
+                        <li><a href="#" title="제휴/광고/부대사업문의 페이지로 이동">제휴/광고/부대사업문의</a></li>
+                        <li><a href="#" title="이용약관 페이지로 이동">이용약관</a></li>
+                        <li><a href="#" title="개인정보처리방침 페이지로 이동"><span>개인정보처리방침</span></a></li>
+                        <li><a href="#" title="윤리경영 페이지로 이동">윤리경영</a></li>
                     </ul>
                     <a href="#" title="극장찾기"><i class="icon"></i>극장찾기</a>
                 </div>
@@ -805,11 +804,11 @@
                         <p>COPYRIGHT © MegaboxJoongAng, Inc. All rights reserved</p>
                     </div>
                     <div class="footer_sns">
-                        <a href="javascript:void(0);" title="MEGABOX 트위터 페이지로 이동">트위터</a>
-                        <a href="javascript:void(0);" title="MEGABOX 페이스북 페이지로 이동">페이스북</a>
-                        <a href="javascript:void(0);" title="MEGABOX 인스타그램 페이지로 이동">인스타그램</a>
-                        <a href="javascript:void(0);" title="MEGABOX 구글플레이 페이지로 이동">구글플레이</a>
-                        <a href="javascript:void(0);" title="MEGABOX 앱스토어 페이지로 이동">앱스토어</a>
+                        <a href="#" title="MEGABOX 트위터 페이지로 이동">트위터</a>
+                        <a href="#" title="MEGABOX 페이스북 페이지로 이동">페이스북</a>
+                        <a href="#" title="MEGABOX 인스타그램 페이지로 이동">인스타그램</a>
+                        <a href="#" title="MEGABOX 구글플레이 페이지로 이동">구글플레이</a>
+                        <a href="#" title="MEGABOX 앱스토어 페이지로 이동">앱스토어</a>
                     </div>
                 </div>
             </div>
@@ -822,145 +821,145 @@
                         <li>
                             <p class="loca">서울</p>
                             <div class="cont">
-                                <a href="javascript:void(0);" title="강남 상세보기">강남</a>
-                                <a href="javascript:void(0);" title="강남대로(씨티) 상세보기">강남대로(씨티)</a>
-                                <a href="javascript:void(0);" title="강동 상세보기">강동</a>
-                                <a href="javascript:void(0);" title="군자 상세보기">군자</a>
-                                <a href="javascript:void(0);" title="동대문 상세보기">동대문</a>
-                                <a href="javascript:void(0);" title="마곡 상세보기">마곡</a>
-                                <a href="javascript:void(0);" title="목동 상세보기">목동</a>
-                                <a href="javascript:void(0);" title="상봉 상세보기">상봉</a>
-                                <a href="javascript:void(0);" title="상암월드컵경기장 상세보기">상암월드컵경기장</a>
-                                <a href="javascript:void(0);" title="성수 상세보기">성수</a>
-                                <a href="javascript:void(0);" title="센트럴 상세보기">센트럴</a>
-                                <a href="javascript:void(0);" title="송파파크하비오 상세보기">송파파크하비오</a>
-                                <a href="javascript:void(0);" title="신촌 상세보기">신촌</a>
-                                <a href="javascript:void(0);" title="이수 상세보기">이수</a>
-                                <a href="javascript:void(0);" title="창동 상세보기">창동</a>
-                                <a href="javascript:void(0);" title="코엑스 상세보기">코엑스</a>
-                                <a href="javascript:void(0);" title="홍대 상세보기">홍대</a>
-                                <a href="javascript:void(0);" title="화곡 상세보기">화곡</a>
-                                <a href="javascript:void(0);" title="ARTNINE 상세보기">ARTNINE</a>
+                                <a href="#" title="강남 상세보기">강남</a>
+                                <a href="#" title="강남대로(씨티) 상세보기">강남대로(씨티)</a>
+                                <a href="#" title="강동 상세보기">강동</a>
+                                <a href="#" title="군자 상세보기">군자</a>
+                                <a href="#" title="동대문 상세보기">동대문</a>
+                                <a href="#" title="마곡 상세보기">마곡</a>
+                                <a href="#" title="목동 상세보기">목동</a>
+                                <a href="#" title="상봉 상세보기">상봉</a>
+                                <a href="#" title="상암월드컵경기장 상세보기">상암월드컵경기장</a>
+                                <a href="#" title="성수 상세보기">성수</a>
+                                <a href="#" title="센트럴 상세보기">센트럴</a>
+                                <a href="#" title="송파파크하비오 상세보기">송파파크하비오</a>
+                                <a href="#" title="신촌 상세보기">신촌</a>
+                                <a href="#" title="이수 상세보기">이수</a>
+                                <a href="#" title="창동 상세보기">창동</a>
+                                <a href="#" title="코엑스 상세보기">코엑스</a>
+                                <a href="#" title="홍대 상세보기">홍대</a>
+                                <a href="#" title="화곡 상세보기">화곡</a>
+                                <a href="#" title="ARTNINE 상세보기">ARTNINE</a>
                             </div>
                         </li>
                         <li>
                             <p class="loca">경기</p>
                             <div class="cont">
-                                <a href="javascript:void(0);" title="고양스타필드 상세보기">고양스타필드</a>
-                                <a href="javascript:void(0);" title="김포한강신도시 상세보기">김포한강신도시</a>
-                                <a href="javascript:void(0);" title="남양주 상세보기">남양주</a>
-                                <a href="javascript:void(0);" title="남양주현대아울렛 스페이스원 상세보기">남양주현대아울렛 스페이스원</a>
-                                <a href="javascript:void(0);" title="동탄 상세보기">동탄</a>
-                                <a href="javascript:void(0);" title="미사강변 상세보기">미사강변</a>
-                                <a href="javascript:void(0);" title="백석 상세보기">백석</a>
-                                <a href="javascript:void(0);" title="별내 상세보기">별내</a>
-                                <a href="javascript:void(0);" title="부천스타필드시티 상세보기">부천스타필드시티</a>
-                                <a href="javascript:void(0);" title="분당 상세보기">분당</a>
-                                <a href="javascript:void(0);" title="수원 상세보기">수원</a>
-                                <a href="javascript:void(0);" title="수원남문 상세보기">수원남문</a>
-                                <a href="javascript:void(0);" title="시흥배곧 상세보기">시흥배곧</a>
-                                <a href="javascript:void(0);" title="안산중앙 상세보기">안산중앙</a>
-                                <a href="javascript:void(0);" title="안성스타필드 상세보기">안성스타필드</a>
-                                <a href="javascript:void(0);" title="양주 상세보기">양주</a>
-                                <a href="javascript:void(0);" title="영통 상세보기">영통</a>
-                                <a href="javascript:void(0);" title="용인기흥 상세보기">용인기흥</a>
-                                <a href="javascript:void(0);" title="용인테크노밸리 상세보기">용인테크노밸리</a>
-                                <a href="javascript:void(0);" title="의정부민락 상세보기">의정부민락</a>
-                                <a href="javascript:void(0);" title="일산 상세보기">일산</a>
-                                <a href="javascript:void(0);" title="일산벨라시타 상세보기">일산벨라시타</a>
-                                <a href="javascript:void(0);" title="킨텍스 상세보기">킨텍스</a>
-                                <a href="javascript:void(0);" title="파주금촌 상세보기">파주금촌</a>
-                                <a href="javascript:void(0);" title="파주운정 상세보기">파주운정</a>
-                                <a href="javascript:void(0);" title="파주출판도시 상세보기">파주출판도시</a>
-                                <a href="javascript:void(0);" title="평택 상세보기">평택</a>
-                                <a href="javascript:void(0);" title="하남스타필드 상세보기">하남스타필드</a>
+                                <a href="#" title="고양스타필드 상세보기">고양스타필드</a>
+                                <a href="#" title="김포한강신도시 상세보기">김포한강신도시</a>
+                                <a href="#" title="남양주 상세보기">남양주</a>
+                                <a href="#" title="남양주현대아울렛 스페이스원 상세보기">남양주현대아울렛 스페이스원</a>
+                                <a href="#" title="동탄 상세보기">동탄</a>
+                                <a href="#" title="미사강변 상세보기">미사강변</a>
+                                <a href="#" title="백석 상세보기">백석</a>
+                                <a href="#" title="별내 상세보기">별내</a>
+                                <a href="#" title="부천스타필드시티 상세보기">부천스타필드시티</a>
+                                <a href="#" title="분당 상세보기">분당</a>
+                                <a href="#" title="수원 상세보기">수원</a>
+                                <a href="#" title="수원남문 상세보기">수원남문</a>
+                                <a href="#" title="시흥배곧 상세보기">시흥배곧</a>
+                                <a href="#" title="안산중앙 상세보기">안산중앙</a>
+                                <a href="#" title="안성스타필드 상세보기">안성스타필드</a>
+                                <a href="#" title="양주 상세보기">양주</a>
+                                <a href="#" title="영통 상세보기">영통</a>
+                                <a href="#" title="용인기흥 상세보기">용인기흥</a>
+                                <a href="#" title="용인테크노밸리 상세보기">용인테크노밸리</a>
+                                <a href="#" title="의정부민락 상세보기">의정부민락</a>
+                                <a href="#" title="일산 상세보기">일산</a>
+                                <a href="#" title="일산벨라시타 상세보기">일산벨라시타</a>
+                                <a href="#" title="킨텍스 상세보기">킨텍스</a>
+                                <a href="#" title="파주금촌 상세보기">파주금촌</a>
+                                <a href="#" title="파주운정 상세보기">파주운정</a>
+                                <a href="#" title="파주출판도시 상세보기">파주출판도시</a>
+                                <a href="#" title="평택 상세보기">평택</a>
+                                <a href="#" title="하남스타필드 상세보기">하남스타필드</a>
                             </div>
                         </li>
                         <li>
                             <p class="loca">인천</p>
                             <div class="cont">
-                                <a href="javascript:void(0);" title="검단 상세보기">검단</a>
-                                <a href="javascript:void(0);" title="송도 상세보기">송도</a>
-                                <a href="javascript:void(0);" title="영종 상세보기">영종</a>
-                                <a href="javascript:void(0);" title="인천논현 상세보기">인천논현</a>
-                                <a href="javascript:void(0);" title="청라지젤 상세보기">청라지젤</a>
+                                <a href="#" title="검단 상세보기">검단</a>
+                                <a href="#" title="송도 상세보기">송도</a>
+                                <a href="#" title="영종 상세보기">영종</a>
+                                <a href="#" title="인천논현 상세보기">인천논현</a>
+                                <a href="#" title="청라지젤 상세보기">청라지젤</a>
                             </div>
                         </li>
                         <li>
                             <p class="loca">대전/충청/세종</p>
                             <div class="cont">
-                                <a href="javascript:void(0);" title="공주 상세보기">공주</a>
-                                <a href="javascript:void(0);" title="논산 상세보기">논산</a>
-                                <a href="javascript:void(0);" title="대전 상세보기">대전</a>
-                                <a href="javascript:void(0);" title="대전유성 상세보기">대전유성</a>
-                                <a href="javascript:void(0);" title="대전중앙로 상세보기">대전중앙로</a>
-                                <a href="javascript:void(0);" title="대전현대아울렛 상세보기">대전현대아울렛</a>
-                                <a href="javascript:void(0);" title="세종(조치원) 상세보기">세종(조치원)</a>
-                                <a href="javascript:void(0);" title="세종나성 상세보기">세종나성</a>
-                                <a href="javascript:void(0);" title="세종청사 상세보기">세종청사</a>
-                                <a href="javascript:void(0);" title="오창 상세보기">오창</a>
-                                <a href="javascript:void(0);" title="제천 상세보기">제천</a>
-                                <a href="javascript:void(0);" title="진천 상세보기">진천</a>
-                                <a href="javascript:void(0);" title="천안 상세보기">천안</a>
-                                <a href="javascript:void(0);" title="청주사창 상세보기">청주사창</a>
-                                <a href="javascript:void(0);" title="충주 상세보기">충주</a>
-                                <a href="javascript:void(0);" title="홍성내포 상세보기">홍성내포</a>
+                                <a href="#" title="공주 상세보기">공주</a>
+                                <a href="#" title="논산 상세보기">논산</a>
+                                <a href="#" title="대전 상세보기">대전</a>
+                                <a href="#" title="대전유성 상세보기">대전유성</a>
+                                <a href="#" title="대전중앙로 상세보기">대전중앙로</a>
+                                <a href="#" title="대전현대아울렛 상세보기">대전현대아울렛</a>
+                                <a href="#" title="세종(조치원) 상세보기">세종(조치원)</a>
+                                <a href="#" title="세종나성 상세보기">세종나성</a>
+                                <a href="#" title="세종청사 상세보기">세종청사</a>
+                                <a href="#" title="오창 상세보기">오창</a>
+                                <a href="#" title="제천 상세보기">제천</a>
+                                <a href="#" title="진천 상세보기">진천</a>
+                                <a href="#" title="천안 상세보기">천안</a>
+                                <a href="#" title="청주사창 상세보기">청주사창</a>
+                                <a href="#" title="충주 상세보기">충주</a>
+                                <a href="#" title="홍성내포 상세보기">홍성내포</a>
                             </div>
                         </li>
                         <li>
                             <p class="loca">부산/대구/경상</p>
                             <div class="cont">
-                                <a href="javascript:void(0);" title="경북도청 상세보기">경북도청</a>
-                                <a href="javascript:void(0);" title="경산하양 상세보기">경산하양</a>
-                                <a href="javascript:void(0);" title="구미강동 상세보기">구미강동</a>
-                                <a href="javascript:void(0);" title="김천 상세보기">김천</a>
-                                <a href="javascript:void(0);" title="남포항 상세보기">남포항</a>
-                                <a href="javascript:void(0);" title="대구(칠성로) 상세보기">대구(칠성로)</a>
-                                <a href="javascript:void(0);" title="대구신세계(동대구) 상세보기">대구신세계(동대구)</a>
-                                <a href="javascript:void(0);" title="대구이시아 상세보기">대구이시아</a>
-                                <a href="javascript:void(0);" title="덕천 상세보기">덕천</a>
-                                <a href="javascript:void(0);" title="마산 상세보기">마산</a>
-                                <a href="javascript:void(0);" title="문경 상세보기">문경</a>
-                                <a href="javascript:void(0);" title="부산극장 상세보기">부산극장</a>
-                                <a href="javascript:void(0);" title="부산대 상세보기">부산대</a>
-                                <a href="javascript:void(0);" title="북대구(칠곡) 상세보기">북대구(칠곡)</a>
-                                <a href="javascript:void(0);" title="삼천포 상세보기">삼천포</a>
-                                <a href="javascript:void(0);" title="양산 상세보기">양산</a>
-                                <a href="javascript:void(0);" title="양산라피에스타 상세보기">양산라피에스타</a>
-                                <a href="javascript:void(0);" title="울산 상세보기">울산</a>
-                                <a href="javascript:void(0);" title="정관 상세보기">정관</a>
-                                <a href="javascript:void(0);" title="창원 상세보기">창원</a>
-                                <a href="javascript:void(0);" title="창원내서 상세보기">창원내서</a>
-                                <a href="javascript:void(0);" title="해운대(장산) 상세보기">해운대(장산)</a>
+                                <a href="#" title="경북도청 상세보기">경북도청</a>
+                                <a href="#" title="경산하양 상세보기">경산하양</a>
+                                <a href="#" title="구미강동 상세보기">구미강동</a>
+                                <a href="#" title="김천 상세보기">김천</a>
+                                <a href="#" title="남포항 상세보기">남포항</a>
+                                <a href="#" title="대구(칠성로) 상세보기">대구(칠성로)</a>
+                                <a href="#" title="대구신세계(동대구) 상세보기">대구신세계(동대구)</a>
+                                <a href="#" title="대구이시아 상세보기">대구이시아</a>
+                                <a href="#" title="덕천 상세보기">덕천</a>
+                                <a href="#" title="마산 상세보기">마산</a>
+                                <a href="#" title="문경 상세보기">문경</a>
+                                <a href="#" title="부산극장 상세보기">부산극장</a>
+                                <a href="#" title="부산대 상세보기">부산대</a>
+                                <a href="#" title="북대구(칠곡) 상세보기">북대구(칠곡)</a>
+                                <a href="#" title="삼천포 상세보기">삼천포</a>
+                                <a href="#" title="양산 상세보기">양산</a>
+                                <a href="#" title="양산라피에스타 상세보기">양산라피에스타</a>
+                                <a href="#" title="울산 상세보기">울산</a>
+                                <a href="#" title="정관 상세보기">정관</a>
+                                <a href="#" title="창원 상세보기">창원</a>
+                                <a href="#" title="창원내서 상세보기">창원내서</a>
+                                <a href="#" title="해운대(장산) 상세보기">해운대(장산)</a>
                             </div>
                         </li>
                         <li>
                             <p class="loca">광주/전라</p>
                             <div class="cont">
-                                <a href="javascript:void(0);" title="광주상무 상세보기">광주상무</a>
-                                <a href="javascript:void(0);" title="광주하남 상세보기">광주하남</a>
-                                <a href="javascript:void(0);" title="목포하당(포르모) 상세보기">목포하당(포르모)</a>
-                                <a href="javascript:void(0);" title="송천 상세보기">송천</a>
-                                <a href="javascript:void(0);" title="순천 상세보기">순천</a>
-                                <a href="javascript:void(0);" title="여수웅천 상세보기">여수웅천</a>
-                                <a href="javascript:void(0);" title="전대(광주) 상세보기">전대(광주)</a>
-                                <a href="javascript:void(0);" title="전주혁신 상세보기">전주혁신</a>
-                                <a href="javascript:void(0);" title="첨단 상세보기">첨단</a>
+                                <a href="#" title="광주상무 상세보기">광주상무</a>
+                                <a href="#" title="광주하남 상세보기">광주하남</a>
+                                <a href="#" title="목포하당(포르모) 상세보기">목포하당(포르모)</a>
+                                <a href="#" title="송천 상세보기">송천</a>
+                                <a href="#" title="순천 상세보기">순천</a>
+                                <a href="#" title="여수웅천 상세보기">여수웅천</a>
+                                <a href="#" title="전대(광주) 상세보기">전대(광주)</a>
+                                <a href="#" title="전주혁신 상세보기">전주혁신</a>
+                                <a href="#" title="첨단 상세보기">첨단</a>
                             </div>
                         </li>
                         <li>
                             <p class="loca">강원</p>
                             <div class="cont">
-                                <a href="javascript:void(0);" title="남춘천 상세보기">남춘천</a>
-                                <a href="javascript:void(0);" title="속초 상세보기">속초</a>
-                                <a href="javascript:void(0);" title="원주 상세보기">원주</a>
-                                <a href="javascript:void(0);" title="원주센트럴 상세보기">원주센트럴</a>
+                                <a href="#" title="남춘천 상세보기">남춘천</a>
+                                <a href="#" title="속초 상세보기">속초</a>
+                                <a href="#" title="원주 상세보기">원주</a>
+                                <a href="#" title="원주센트럴 상세보기">원주센트럴</a>
                             </div>
                         </li>
                         <li>
                             <p class="loca">제주</p>
                             <div class="cont">
-                                <a href="javascript:void(0);" title="제주 상세보기">제주</a>
+                                <a href="#" title="제주 상세보기">제주</a>
                             </div>
                         </li>
                     </ul>
@@ -974,9 +973,7 @@
     <!-- //wrap -->
 
     <!-- script -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/js/megabox.js"></script>
+    <script src="assets/js/main.js"></script>
     <!-- //script -->
 </body>
 
