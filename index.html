@@ -231,24 +231,24 @@
                     <a href="#" class="ir_so" title="검색 레이어 입니다.">검색 레이어 입니다.</a>
                     <div class="tab_rank">
                         <ul>
-                            <li class="on"><button type="button" class="btn">예매율 순</button></li>
-                            <li><button type="button" class="btn">메가박스 관객순</button></li>
+                            <li class="on"><button class="btn" data-value="#rate">예매율 순</button></li>
+                            <li><button class="btn" data-value="#audience">메가박스 관객순</button></li>
                         </ul>
                     </div>
                     <!-- rank_cont -->
                     <div class="rank_cont">
                         <div class="list">
-                            <p class="img">
-                                <img src="assets/img/aR0TeTKH61QBpOgvYEpPCyFs3im2ivR0_420.jpg" alt="반지의 제왕 : 반지원정대">
-                            </p>
-                            <ul>
+                            <ul id="rate" data-type="#rate" class="on">
+                                <img class="img" src="assets/img/aR0TeTKH61QBpOgvYEpPCyFs3im2ivR0_420.jpg" alt="반지의 제왕 : 반지원정대">
                                 <li><em>1</em><a href="#" title="반지의 제왕 : 반지원정대 상세보기">반지의 제왕 : 반지원정대</a></li>
                                 <li><em>2</em><a href="#" title="미나리 상세보기">미나리</a></li>
                                 <li><em>3</em><a href="#" title="태양을 덮다 상세보기">태양을 덮다</a></li>
                                 <li><em>4</em><a href="#" title="아이 씨 유 상세보기">아이 씨 유</a></li>
                                 <li><em>5</em><a href="#" title="극장판 귀멸의 칼날: 무한열차편 상세보기">극장판 귀멸의 칼날: 무한열차편</a></li>
                             </ul>
-                            <ul>
+                            <ul id="audience" data-type="#audience">
+                                <img class="img" src="assets/img/qDLdOQKdvIeLyniUM7DX567IaJeyJmbv_420.jpg" alt="극장판 귀멸의 칼날:
+                                무한열차편">
                                 <li><em>1</em><a href="#" title="극장판 귀멸의 칼날: 무한열차편 상세보기">극장판 귀멸의 칼날:
                                         무한열차편</a></li>
                                 <li><em>2</em><a href="#" title="소울 상세보기">소울</a></li>
@@ -787,7 +787,7 @@
                         <li><a href="#" title="개인정보처리방침 페이지로 이동"><span>개인정보처리방침</span></a></li>
                         <li><a href="#" title="윤리경영 페이지로 이동">윤리경영</a></li>
                     </ul>
-                    <a href="#" title="극장찾기"><i class="icon"></i>극장찾기</a>
+                    <button title="극장찾기"><i class="icon"></i>극장찾기</button>
                 </div>
             </div>
             <div class="footer_bottom">
@@ -812,7 +812,7 @@
                     </div>
                 </div>
             </div>
-            <div class="layer_theater">
+            <div id="layer_theater">
                 <div class="wrap">
                     <a href="" class="link_acc" title="메가박스 극장찾기 레이어 입니다.">메가박스 극장찾기 레이어 입니다.</a>
                     <p class="tit">메가박스 극장 찾기</p>

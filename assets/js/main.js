@@ -24,13 +24,13 @@ gnbList.forEach(menu => {
 });
 
 
-// 레이어 팝업
+// 상단 레이어
 const layerContainer = document.querySelector('.link_area');
 const layerContents = [
     '#layer_sitemap',
     '#layer_search',
-    '#layer_mymega'
-]
+    '#layer_mymega',
+];
 
 const layerPopUp = layerContents.map(id => document.querySelector(id));
 
@@ -58,3 +58,60 @@ layerContainer.addEventListener('click', (e) => {
         }
     });
 });
+
+// 예매율,관객순 탭
+const rankBtnContainer = document.querySelector('.tab_rank ul');
+const rankContents = ['#rate','#audience'];
+const rankList = rankContents.map(id => document.querySelector(id))
+
+rankBtnContainer.addEventListener('click',(e)=>{
+    const type = e.target.dataset.value;
+    
+    if(type == null){
+        return;
+    }
+    
+    const active = document.querySelector('.tab_rank li.on');
+    if (active != null) {
+        active.classList.remove('on')
+    }
+    e.target.parentNode.classList.add('on')
+
+    rankList.forEach(layer => {
+        if (type === layer.dataset.type) {
+            layer.classList.add('on')
+        } else {
+            layer.classList.remove('on')
+        }
+    });
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 푸터 레이어 극장찾기
+const theater = document.querySelector('#layer_theater')
+const layerFooterBtn = document.querySelector('.footer_top .wrap>button')
+const footerClose = document.querySelector('.footer_btn')
+
+const layerBtnHandler = (val)=>()=>{
+    val.classList.toggle('on')
+}
+
+layerFooterBtn.addEventListener('click',layerBtnHandler(theater));
+footerClose.addEventListener('click',layerBtnHandler(theater));

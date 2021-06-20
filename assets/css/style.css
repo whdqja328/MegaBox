@@ -111,6 +111,10 @@
 #layer_search .rank_cont .img { overflow: hidden; position: absolute; left: 0; top: 0; width: 150px; height: 213px; } 
 #layer_search .rank_cont .list { width: 250px; } 
 #layer_search .rank_cont .list li { position: relative; padding: 11px 0 0 30px; height: 40px; width: 100%; } 
+#layer_search #rate
+,#layer_search #audience {display: none;}
+#layer_search #rate.on,
+#layer_search #audience.on {display: block;}
 #layer_search .list li em { position: absolute; left: 0; top: 5px; display: inline-block; margin-right: 10px; font-style: italic; font-size: 1.8666em; color: #fff; font-weight: 300; line-height: 1.1; vertical-align: middle; } 
 #layer_search .list li a { display: inline-block; color: #fff; text-decoration: none; vertical-align: middle; max-width: 320px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } 
 #layer_search .list li a:hover { text-decoration: underline; } 
@@ -324,8 +328,8 @@
 .footer_top .wrap ul { float: left; } 
 .footer_top .wrap ul li { float: left; margin-left: 14px; font-size: 0.8666em;} 
 .footer_top .wrap ul li:first-child { margin-left: 0; } 
-.footer_top .wrap>a { overflow: hidden; float: right; display: block; width: 106px; height: 30px; margin: 0; padding: 0; text-align: center; line-height: 28px; color: #666; font-size: .8667em; border: 1px solid #d8d9db; border-radius: 30px; text-decoration: none; } 
-.footer_top .wrap>a .icon { display: inline-block; width: 15px; height: 15px; background: url(../img/ico-footer-search.png) no-repeat center; } 
+.footer_top .wrap>button { overflow: hidden; float: right; display: block; width: 106px; height: 30px; margin: 0; padding: 0; text-align: center; line-height: 28px; color: #666; font-size: .8667em; border: 1px solid #d8d9db; border-radius: 30px; text-decoration: none; cursor: pointer; } 
+.footer_top .wrap>button .icon { display: inline-block; width: 15px; height: 15px; background: url(../img/ico-footer-search.png) no-repeat center; } 
 
 .footer_bottom { overflow: hidden; width: 1100px; margin: 0 auto; padding: 0; } 
 .footer_bottom .wrap {width: 1100px; margin: 0 auto;} 
@@ -344,13 +348,13 @@
 .footer_sns a:nth-child(5) {width: 31px; background: url(../img/ico-appstore.png);}
 
 /* footer layer */
-.layer_theater {position: absolute; left: 0; bottom: 200px; width: 100%; z-index: 98; background-color: #333; display: none;}
-.layer_theater.on {display: block;}
-.layer_theater .wrap {position: relative; width: 1100px; margin: 0 auto; padding: 50px 0;}
-.layer_theater .wrap .tit {padding: 0 0 30px 0; font-size: 1.4666em; line-height: 1.1; color: #fff;}
-.layer_theater .wrap .link_acc {overflow: hidden; position: absolute; left: -9999px; top: 0; width: 0; height: 0; font-size: 0;}
-.layer_theater .wrap .list {overflow: hidden; padding: 39px 30px; border: 1px solid #3c3c3c;}
-.layer_theater .wrap .list li {position: relative; padding: 20px 0 0 153px;}
-.layer_theater .wrap .list .loca {position: absolute; left: 0; top: 19px; color: #fff;}
-.layer_theater .wrap .list div a {display: inline-block; margin: 0 24px 10px 0; color: #bbb; font-size: 0.9333em; vertical-align: top;}
+#layer_theater {position: absolute; display: none; left: 0; bottom: 200px; width: 100%; z-index: 98; background-color: #333;}
+#layer_theater .wrap {position: relative; width: 1100px; margin: 0 auto; padding: 50px 0;}
+#layer_theater.on {display: block;}
+#layer_theater .tit {padding: 0 0 30px 0; font-size: 1.4666em; line-height: 1.1; color: #fff;}
+#layer_theater .link_acc {overflow: hidden; position: absolute; left: -9999px; top: 0; width: 0; height: 0; font-size: 0;}
+#layer_theater .list {overflow: hidden; padding: 39px 30px; border: 1px solid #3c3c3c;}
+#layer_theater .list li {position: relative; padding: 20px 0 0 153px;}
+#layer_theater .list .loca {position: absolute; left: 0; top: 19px; color: #fff;}
+#layer_theater .list div a {display: inline-block; margin: 0 24px 10px 0; color: #bbb; font-size: 0.9333em; vertical-align: top;}
 .footer_btn {overflow: hidden; display: block; position: absolute; right: 0; top: 42px; width: 36px; height: 36px; text-indent: -9999px; background: url(../img/btn-footer-theater-close.png) no-repeat center;}
