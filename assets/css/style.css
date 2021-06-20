@@ -195,29 +195,33 @@
 .benefit_tit a { display: block; width: 16px; height: 16px; text-indent: -9999px; background: url(../img/btn-more-cross-purple.png) no-repeat 0 0; float: right; margin-top: 15px; } 
 
 /* main_section02 이미지 슬라이더 */
-#main_section02 .slider { overflow: hidden; position: relative; width: 687px; height: 325px; } 
-.slider .slider_view { position: absolute; width: 1100px; height: 325px; } 
-.slider .slider_view .slider_item { width: 934px; height: 325px; } 
-.slider .slider_item .position { overflow: hidden; position: relative; width: 100%; height: 100%; } 
-.slider_item .position a { display: block; } 
+#main_section02 .slider_wrap { overflow: hidden; position: relative; height: 325px; } 
+.slide_container { position: absolute; width: 100%;} 
+/* .slide_container.animate {transition: left .3s ease-in-out;} */
+.slide_container .slide { position: absolute; left: 0; width: 100%;  height: 325px; text-align: center; overflow: hidden;} 
+.slide_container .position { overflow: hidden; position: relative; width: 100%; height: 100%; } 
+.slide .position a { display: block; } 
 
-.position .txt { position: absolute; left: 0; top: 0; } 
+.position .txt { position: absolute; left: 0; top: 0; transform: translateY(70px); transition: all .5s ease; opacity: 0;} 
+.slide.fade_in .position .txt{transform: translateY(0); opacity: 1;}
 .position .txt a { width: 300px; height: 230px; } 
 .position .txt a img { min-width: 300px; min-height: 230px; } 
-.position .bg { position: absolute; left: 300px; top: 0; } 
+.position .bg { position: absolute; left: 300px; top: 0; transform: translateX(100px); transition: all .7s ease; opacity: 0;} 
+.slide.fade_in .position .bg {transform: translateX(0); opacity: 1;}
 
-.slider_util a { display: block; width: 6px; height: 12px; text-indent: -9999px; background-repeat: no-repeat; background-position: center; z-index: 9999; position: absolute; bottom: 43px; } 
-.slider-pause,.slider-play { display: none; } 
-.slider-pause a { background-image: url(../img/btn-benefit-slider-pause.png); left: 250px; } 
-.slider-pause.on { display: block; } 
-.slider-play a { background-image: url(../img/btn-benefit-slider-play.png); left: 250px; } 
-.slider-play.on { display: block; } 
+.pager { display: block; z-index: 9999; position: absolute; width: 190px; height: 2px; bottom: 43px;} 
+.pager span {float: left; display: block; width: 10%; height: 2px; background-color: #ebebeb;}
+.pager span.on {background-color: #503396; }
+.slider_pause,.slider_play { display: none; } 
+.slider_pause { background-image: url(../img/btn-benefit-slider-pause.png); } 
+.slider_pause.on { display: block; } 
+.slider_play { background-image: url(../img/btn-benefit-slider-play.png);} 
+.slider_play.on { display: block; } 
 
 /* main_section02 광고 */
 .banner_ad { position: relative; min-width: 1100px; height: 204px; } 
 .banner_ad .ad_img { overflow: hidden; position: absolute; right: 0; bottom: 0; width: 415px; height: 530px; border-radius: 5px; } 
 .ad_img img:first-child { position: absolute; z-index: 9999; width: 35px; height: 20px; margin-top: 510px; margin-left: 380px; } 
-.banner_ad .banner { } 
 .banner .size { float: left; width: 441px; height: 204px; box-shadow: 10px 10px 10px 0px rgb(0,0,0.2); } 
 .banner .size + .size { margin-left: 20px; } 
 .banner .size img { border-radius: 5px; } 
