@@ -89,11 +89,17 @@ rankBtnContainer.addEventListener('click',(e)=>{
 
 // Slider
 document.addEventListener("DOMContentLoaded", function () {
+
   // 변수 지정
-  const slideWrap = document.querySelector(".slide_wrap"),
-    slideContainer = document.querySelector(".slide_container"),
-    slides = document.querySelectorAll(".slide"),
-    pagerBtn = document.querySelectorAll(".pager span");
+  const slideWrap = document.querySelector(".slide_wrap");
+  const slideContainer = document.querySelector(".slide_container");
+  const slides = document.querySelectorAll(".slide");
+  const pagers = document.querySelectorAll(".pager span");
+  const prev = document.querySelector('.slider_util .prev');
+  const next = document.querySelector('.slider_util .next');
+  const pause = document.querySelector('.slider_util .pause');
+  const play = document.querySelector('.slider_util .play');
+  const pageCount = document.querySelector('.slider_count')
 
   let slideCount = slides.length,
     currentIndex = 0,
@@ -109,11 +115,12 @@ document.addEventListener("DOMContentLoaded", function () {
     slideContainer.classList.add("animate");
     slideContainer.style.left = -100 * idx + "%";
     currentIndex = idx;
+    pageCount.textContent = `${currentIndex + 1} / ${slideCount}`;
 
-    for (let y = 0; y < pagerBtn.length; y++) {
-      pagerBtn[y].classList.remove("on");
+    for (let y = 0; y < pagers.length; y++) {
+      pagers[y].classList.remove("on");
     }
-    pagerBtn[idx].classList.add("on");
+    pagers[idx].classList.add("on");
 
     for (let s = 0; s < slideCount; s++) {
       slides[s].classList.remove("fade_in");
@@ -140,6 +147,24 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   //pager로 슬라이드 이동하기
+  prev.addEventListener('click',()=>{
+    goToSlide(currentIndex - 1);
+  })
+
+  next.addEventListener('click',()=>{
+    goToSlide(currentIndex + 1);
+  })
+
+  pause.addEventListener('click',()=>{
+    stopAutoSlide();
+    play.classList.add('on');
+    pause.classList.add('on');
+  });
+  play.addEventListener('click',()=>{
+    startAutoSlide();
+    pause.classList.remove('on');
+    play.classList.remove('on');
+  });
   
 });
 
