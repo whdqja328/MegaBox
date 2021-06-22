@@ -87,7 +87,7 @@ rankBtnContainer.addEventListener('click',(e)=>{
 
 })
 
-// Slider
+// 슬라이더
 document.addEventListener("DOMContentLoaded", function () {
 
   // 변수 지정
@@ -126,6 +126,23 @@ document.addEventListener("DOMContentLoaded", function () {
       slides[s].classList.remove("fade_in");
     }
     slides[idx].classList.add("fade_in");
+
+    // 슬라이드 pager 진행도
+    const pagerUpdate = ()=>{
+      if(currentIndex == 0){
+        prev.classList.add('off')
+      }else {
+        prev.classList.remove('off')
+      }
+  
+      if(currentIndex == slideCount-1){
+        next.classList.add('off')
+      }else {
+        next.classList.remove('off')
+      }
+    }
+  
+    pagerUpdate();
   }
 
   goToSlide(0);
@@ -146,13 +163,14 @@ document.addEventListener("DOMContentLoaded", function () {
     clearInterval(timer);
   }
 
+
   //pager로 슬라이드 이동하기
   prev.addEventListener('click',()=>{
-    goToSlide(currentIndex - 1);
+    goToSlide(currentIndex-1)
   })
 
   next.addEventListener('click',()=>{
-    goToSlide(currentIndex + 1);
+    goToSlide(currentIndex+1)
   })
 
   pause.addEventListener('click',()=>{

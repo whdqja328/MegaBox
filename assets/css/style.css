@@ -216,7 +216,9 @@
 .slider_control .slider_util {float: left; padding: 0 10px 0 15px;}
 .slider_util button {display: block; float: left; height: 12px; margin-left: 8px; background-color: transparent;}
 .slider_util .prev {width: 7px; background-image: url(../img/btn-benefit-slider-prev.png);}
+.slider_util .prev.off {opacity: 0.5; pointer-events: none;}
 .slider_util .next {width: 7px; background-image: url(../img/btn-benefit-slider-next.png);}
+.slider_util .next.off {opacity: 0.5; pointer-events: none;}
 .slider_util .pause {width: 6px; background-image: url(../img/btn-benefit-slider-pause.png);}
 .slider_util .pause.on {display: none;}
 .slider_util .play {width: 6px; background-image: url(../img/btn-benefit-slider-play.png); display: none;}
