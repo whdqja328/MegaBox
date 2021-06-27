@@ -4,6 +4,7 @@ const adClose = document.querySelector('.btn_close')
 
 adClose.addEventListener('click', () => {
   document.querySelector('.header_ad').style.display = "none";
+  document.querySelector('#contents').style.padding = '0px';
   document.querySelector('#main_section01').classList.add('close')
   document.querySelector('#header').classList.add('close')
 })

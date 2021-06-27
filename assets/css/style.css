@@ -2,7 +2,7 @@
 #wrap { width: 100%; height: 100%; } 
 #header { position: absolute; z-index: 100; top: 80px; width: 100%; min-width: 1100px; border-bottom: 1px solid #3c3c3c; } 
 #header.close {top: 0;}
-#contents { width: 100%; } 
+#contents { width: 100%; padding-top: 80px;} 
 
 /* header 광고 */
 .header_ad {position: absolute; display: block; width: 100%; z-index: 99; text-align: center; background-color: #611611;}
@@ -150,7 +150,7 @@ margin: 0 0 0 -200px; border-radius: 10px; background-color: #ecf0f4;}
 
 /* contents main_section01 */
 .main_page { overflow: hidden; position: relative; z-index: 1; } 
-#main_section01 { display: block; position: relative; min-height: 880px; padding: 80px 0; } 
+#main_section01 { display: block; position: relative; min-height: 880px; padding: 0 0 80px 0; } 
 #main_section01.close { padding-top: 0;} 
 #main_section01 .bg { overflow: hidden; position: absolute; z-index: 2; width: 100%; min-width: 1100px; height: 100%; margin: 0 auto; } 
 #main_section01 .bg::before { content: ''; display: block; position: absolute; left: 0; top: 0; z-index: 2; width: 100%; height: 100%; background: linear-gradient(to right, rgba(85,63,5,1) 0%, rgba(23,17,1,0) 50%, rgba(85,63,5,1) 100%); } 
@@ -158,8 +158,9 @@ margin: 0 0 0 -200px; border-radius: 10px; background-color: #ecf0f4;}
 #main_section01 .bg img { filter: blur(15px); } 
 #main_section01 .bg_pattern { position: absolute; left: 0; top: 0; z-index: 3; width: 100%; height: 100%; background: url(../img/bg-movie-detail-pattern.png) repeat 0 0; } 
 
-.cont_area { position: relative; z-index: 3; overflow: hidden; text-align: center; display: block; width: 1100px; height: auto; margin: 0 auto; padding: 0 0 50px 0; } 
-.cont_area h2 { display: inline-block; margin: 170px 0 20px 0; font-size: 16px; border-bottom: 2px solid #414246; } 
+.cont_area { overflow: hidden;display: block;position: relative;z-index: 3;width: 1100px;height: auto;margin: 0 auto;padding: 0 0 50px 0; } 
+.cont_area .tab_title { text-align: center; margin: 170px 0 20px 0;} 
+.cont_area .tab_title button {position: relative; display: inline-block; margin: 0 18px; padding: 0 0 5px 0; vertical-align: top; color: #fff; background-color: transparent; border-bottom: 2px solid #aaa;}
 .cont_area .more_movie { display: block; position: absolute; right: 0; top: 177px; color: #aaa; line-height: 16px; } 
 .cont_area .more_movie .icon { display: inline-block; width: 16px; height: 16px; margin-left: 6px; background: url(../img/ico-more-cross-gray.png) no-repeat 0 0; vertical-align: middle; } 
 
@@ -251,7 +252,7 @@ margin: 0 0 0 -200px; border-radius: 10px; background-color: #ecf0f4;}
 .banner .size img { border-radius: 5px; } 
 .banner .size.small { display: block; width: 204px; } 
 
-.benefit_menu { overflow: hidden; padding: 180px 0 0 0;} 
+.benefit_menu { overflow: hidden; padding: 50px 0 0 0;} 
 .benefit_menu ul li { float: left; width: 20%; } 
 .benefit_menu ul li a { display: block; padding: 60px 0 0 0; text-align: center;} 
 .benefit_menu li:nth-child(1) a { background: url(../img/ico-vip-main.png) no-repeat center 2px; } 
